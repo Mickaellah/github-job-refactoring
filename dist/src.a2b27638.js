@@ -35837,7 +35837,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    font-style: 36px;\n    font-weight: bold;\n    text-transform: uppercase;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-style: 36px;\n    font-weight: bold;\n    text-transform: uppercase;\n    color: black;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36134,7 +36134,31 @@ function App() {
     to: "/"
   }, /*#__PURE__*/_react.default.createElement(_home.default, null))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js"}],"src/context/context.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js"}],"src/global-styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GlobalStyles = void 0;
+
+var _styledComponents = require("styled-components");
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    html, body {\n        font-size: 16px;\n        margin: 0;\n        color: #334680;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var GlobalStyles = (0, _styledComponents.createGlobalStyle)(_templateObject());
+exports.GlobalStyles = GlobalStyles;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/context/context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36241,12 +36265,14 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _app = _interopRequireDefault(require("./app"));
 
+var _globalStyles = require("./global-styles");
+
 var _context = require("./context/context");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_context.ContextProvider, null, /*#__PURE__*/_react.default.createElement(_app.default, null)), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./app":"src/app.js","./context/context":"src/context/context.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_context.ContextProvider, null, /*#__PURE__*/_react.default.createElement(_globalStyles.GlobalStyles, null), /*#__PURE__*/_react.default.createElement(_app.default, null)), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./app":"src/app.js","./global-styles":"src/global-styles.js","./context/context":"src/context/context.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

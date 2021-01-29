@@ -8,4 +8,5 @@ export const Text = styled.h1`
     font-style: 36px;
     font-weight: bold;
     text-transform: uppercase;
+    color: black;
 `;
