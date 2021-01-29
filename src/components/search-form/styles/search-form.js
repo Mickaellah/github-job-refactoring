@@ -16,9 +16,20 @@ export const Input = styled.input`
     border-radius: 5px;
     border: none;
     background-color: #ffffff;
-    padding-inline-start: 16px;
+    padding-inline-start: 48px;
     color: #dbdbdb;
     margin-block-start: 8px;
+    background-image: url('./images/work_outline-24px.svg');
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+
+    ::placeholder {
+        color: #b9bdcf;
+    }
+
+    @media (min-width: 600px) {
+        padding-inline-start: 64px;
+    } 
 `;
 
 export const Button = styled.button`
