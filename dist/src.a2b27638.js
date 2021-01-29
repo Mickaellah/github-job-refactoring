@@ -35972,24 +35972,32 @@ exports.default = HeaderContainer;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _components = _interopRequireDefault(require("../components"));
+var _components = require("../components");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function HeaderContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.default, null, /*#__PURE__*/_react.default.createElement(_components.default.Text, null, "Gigthub job"));
+function HeaderContainer(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Gigthub job"), children);
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
-// import React from 'react';
-// import HeaderContainer from '../containers/header';
-// export default function Home() {
-//     return (
-//         <>
-//             <HeaderContainer />
-//         </>
-//     )
-// }
-},{}],"src/app.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Home;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _header = _interopRequireDefault(require("../containers/header"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Home() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null));
+}
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36001,16 +36009,16 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _header = _interopRequireDefault(require("./containers/header"));
-
 var _home = _interopRequireDefault(require("./pages/home"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_header.default, null);
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_home.default, null))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./containers/header":"src/containers/header.js","./pages/home":"src/pages/home.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -36050,7 +36058,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52920" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54414" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
