@@ -36364,9 +36364,100 @@ JobCheckbox.Label = function JobCheckboxLabel(_ref3) {
 };
 },{"react":"node_modules/react/index.js","./styles/job_checkbox":"src/components/job_checkbox/styles/job_checkbox.js"}],"src/components/location_checkboxes/index.js":[function(require,module,exports) {
 
-},{}],"src/components/location_search_form/index.js":[function(require,module,exports) {
+},{}],"src/components/location_search_form/styles/locatio_search_form.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"src/components/index.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Label = exports.Input = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    text-transform: uppercase;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    padding: 12px;\n    margin-block-start: 16px;\n    border: none;\n    border-radius: 4px;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column-reverse;\n    padding-block: 16px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.form(_templateObject());
+
+exports.Container = Container;
+
+var Input = _styledComponents.default.input(_templateObject2());
+
+exports.Input = Input;
+
+var Label = _styledComponents.default.label(_templateObject3());
+
+exports.Label = Label;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/location_search_form/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = LocationSearchForm;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _locatio_search_form = require("./styles/locatio_search_form");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function LocationSearchForm(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_locatio_search_form.Container, restProps, children);
+}
+
+LocationSearchForm.Input = function LocationSearchFormInput(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_locatio_search_form.Input, restProps, children);
+};
+
+LocationSearchForm.Label = function LocationSearchFormLabel(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_locatio_search_form.Label, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/locatio_search_form":"src/components/location_search_form/styles/locatio_search_form.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36625,7 +36716,10 @@ function CheckboxesContainer(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
     type: "checkbox"
-  }), /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Label, null, "Full time")));
+  }), /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Label, null, "Full time")), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm, null, /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Input, {
+    type: "text",
+    placeholder: "City, state, zip code or country"
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Label, null, "Location"), children));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
 "use strict";
