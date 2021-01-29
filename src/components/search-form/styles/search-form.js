@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.form`
-    width: 80%;
+    max-width: 100%;
     padding: 32px;
     border-radius: 12px;
     background-image: url('./images/backgroundImg.png');

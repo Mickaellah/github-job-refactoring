@@ -35847,7 +35847,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 16px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-block: 16px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -35929,7 +35929,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 80%;\n    padding: 32px;\n    border-radius: 12px;\n    background-image: url('./images/backgroundImg.png');\n    background-repeat: no-repeat;\n    object-fit: contain;\n"]);
+  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    padding: 32px;\n    border-radius: 12px;\n    background-image: url('./images/backgroundImg.png');\n    background-repeat: no-repeat;\n    object-fit: contain;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -35989,9 +35989,287 @@ SearchForm.Button = function SearchFormButton(_ref3) {
 
   return /*#__PURE__*/_react.default.createElement(_searchForm.Button, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/search-form":"src/components/search-form/styles/search-form.js"}],"src/components/cards/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/search-form":"src/components/search-form/styles/search-form.js"}],"src/components/cards/styles/cards.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"src/components/job_checkbox/index.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Holder = exports.LocationContainer = exports.City = exports.Time = exports.Logo = exports.Button = exports.Title = exports.Content = exports.Group = exports.Header = exports.List = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 16px;\n\n    @media (min-width: 700px) {\n        margin-inline-start: 50%;\n    }\n"]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n    border: 1px solid #334680;\n    border-radius: 5px;\n    padding: 8px;\n    background-color: white;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    grid-column: 2 / 4;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var List = _styledComponents.default.div(_templateObject2());
+
+exports.List = List;
+
+var Header = _styledComponents.default.h3(_templateObject3());
+
+exports.Header = Header;
+
+var Group = _styledComponents.default.div(_templateObject4());
+
+exports.Group = Group;
+
+var Content = _styledComponents.default.div(_templateObject5());
+
+exports.Content = Content;
+
+var Title = _styledComponents.default.h2(_templateObject6());
+
+exports.Title = Title;
+
+var Button = _styledComponents.default.button(_templateObject7());
+
+exports.Button = Button;
+
+var Logo = _styledComponents.default.img(_templateObject8());
+
+exports.Logo = Logo;
+
+var Time = _styledComponents.default.p(_templateObject9());
+
+exports.Time = Time;
+
+var City = _styledComponents.default.p(_templateObject10());
+
+exports.City = City;
+
+var LocationContainer = _styledComponents.default.div(_templateObject11());
+
+exports.LocationContainer = LocationContainer;
+
+var Holder = _styledComponents.default.div(_templateObject12());
+
+exports.Holder = Holder;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/cards/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Cards;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _cards = require("./styles/cards");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Cards(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Container, restProps, children);
+}
+
+Cards.Header = function CardsHeader(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Header, restProps, children);
+};
+
+Cards.Group = function CardsGroup(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Group, restProps, children);
+};
+
+Cards.List = function CardsList(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.List, restProps, children);
+};
+
+Cards.Content = function CardsContent(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Content, restProps, children);
+};
+
+Cards.Logo = function CardsLogo(_ref6) {
+  var restProps = Object.assign({}, _ref6);
+  return /*#__PURE__*/_react.default.createElement(_cards.Logo, restProps);
+};
+
+Cards.Title = function CardsTitle(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Title, restProps, children);
+};
+
+Cards.Button = function CardsButton(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Button, restProps, children);
+};
+
+Cards.City = function CardsCity(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.City, restProps, children);
+};
+
+Cards.Time = function CardsTime(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Time, restProps, children);
+};
+
+Cards.LocationContainer = function CardsLocationContainer(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.LocationContainer, restProps, children);
+};
+
+Cards.Holder = function CardsHolder(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.Holder, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/cards":"src/components/cards/styles/cards.js"}],"src/components/job_checkbox/index.js":[function(require,module,exports) {
 
 },{}],"src/components/location_checkboxes/index.js":[function(require,module,exports) {
 
@@ -36094,71 +36372,7 @@ function SearchFormContainer(_ref) {
     type: "submit"
   }, "Search"), children);
 }
-},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Home;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _header = _interopRequireDefault(require("../containers/header"));
-
-var _search_form = _interopRequireDefault(require("../containers/search_form"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Home() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null));
-}
-},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js"}],"src/app.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = App;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _home = _interopRequireDefault(require("./pages/home"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function App() {
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_home.default, null))));
-}
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js"}],"src/global-styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.GlobalStyles = void 0;
-
-var _styledComponents = require("styled-components");
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    html, body {\n        font-size: 16px;\n        margin: 0;\n        color: #334680;\n    }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var GlobalStyles = (0, _styledComponents.createGlobalStyle)(_templateObject());
-exports.GlobalStyles = GlobalStyles;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/context/context.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/context/context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36256,7 +36470,132 @@ function ContextProvider(_ref) {
     }
   }, children);
 }
-},{"react":"node_modules/react/index.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/containers/card.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = CardsContainer;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _context = require("../context/context");
+
+var _components = require("../components");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function CardsContainer(_ref) {
+  var children = _ref.children;
+
+  var _useContext = (0, _react.useContext)(_context.Context),
+      state = _useContext.state;
+
+  var data = state.data,
+      loading = state.loading;
+  console.log(data);
+  return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, data && data.map(function (job) {
+    var time = new Date().getTime() - new Date(job.created_at).getTime();
+    var result = Math.floor(time / (1000 * 60 * 60 * 24));
+    return /*#__PURE__*/_react.default.createElement(_components.Cards.List, {
+      key: job.id
+    }, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+      src: job.company_logo,
+      alt: "Company logo"
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Content, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Header, null, job.company), /*#__PURE__*/_react.default.createElement(_components.Cards.Title, null, job.title), /*#__PURE__*/_react.default.createElement(_components.Cards.Button, {
+      type: "button"
+    }, job.type), /*#__PURE__*/_react.default.createElement(_components.Cards.Holder, null, /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+      src: "./images/public-24px.svg",
+      alt: "location"
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.City, null, job.location)), /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+      src: "./images/access_time-24px.svg",
+      alt: "Access time"
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours")))));
+  }));
+}
+},{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Home;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _header = _interopRequireDefault(require("../containers/header"));
+
+var _search_form = _interopRequireDefault(require("../containers/search_form"));
+
+var _card = _interopRequireDefault(require("../containers/card"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Home() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
+}
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js","../containers/card":"src/containers/card.js"}],"src/app.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = App;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _home = _interopRequireDefault(require("./pages/home"));
+
+var _context = require("./context/context");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function App() {
+  var _useContext = (0, _react.useContext)(_context.Context),
+      state = _useContext.state;
+
+  var data = state.data,
+      loading = state.loading;
+  console.log(data);
+  console.log(loading);
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), !loading && data && /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_home.default, null)))));
+}
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js","./context/context":"src/context/context.js"}],"src/global-styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GlobalStyles = void 0;
+
+var _styledComponents = require("styled-components");
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    html, body {\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    img {\n        max-width: 100%;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var GlobalStyles = (0, _styledComponents.createGlobalStyle)(_templateObject());
+exports.GlobalStyles = GlobalStyles;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -36300,7 +36639,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58406" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62829" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

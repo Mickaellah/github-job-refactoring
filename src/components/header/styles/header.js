@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-    padding: 16px;
+    padding-block: 16px;
 `;
 
 export const Text = styled.h1`
