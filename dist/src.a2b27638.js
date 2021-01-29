@@ -35896,9 +35896,100 @@ Header.Text = function HeaderText(_ref2) {
 
   return /*#__PURE__*/_react.default.createElement(_header.Text, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/header":"src/components/header/styles/header.js"}],"src/components/search-form/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/header":"src/components/header/styles/header.js"}],"src/components/search-form/styles/search-form.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"src/components/cards/index.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Button = exports.Input = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    margin-left: -80px;\n    background-color: #1e86ff;\n    color: white;\n    border: 0;\n    padding-inline: 16px;\n    padding-block: 12px;\n    border-radius: 5px;\n    -webkit-appearance: none;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding-right: 30%;\n    padding-block: 16px;\n    border-radius: 5px;\n    border: none;\n    background-color: #ffffff;\n    padding-inline-start: 16px;\n    color: #dbdbdb;\n    margin-block-start: 8px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    width: 80%;\n    padding: 32px;\n    border-radius: 12px;\n    background-image: url('./images/backgroundImg.png');\n    background-repeat: no-repeat;\n    object-fit: contain;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.form(_templateObject());
+
+exports.Container = Container;
+
+var Input = _styledComponents.default.input(_templateObject2());
+
+exports.Input = Input;
+
+var Button = _styledComponents.default.button(_templateObject3());
+
+exports.Button = Button;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/search-form/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = SearchForm;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _searchForm = require("./styles/search-form");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function SearchForm(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_searchForm.Container, restProps, children);
+}
+
+SearchForm.Input = function SearchFormInput(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_searchForm.Input, restProps, children);
+};
+
+SearchForm.Button = function SearchFormButton(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_searchForm.Button, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/search-form":"src/components/search-form/styles/search-form.js"}],"src/components/cards/index.js":[function(require,module,exports) {
 
 },{}],"src/components/job_checkbox/index.js":[function(require,module,exports) {
 
@@ -35980,6 +36071,29 @@ function HeaderContainer(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Gigthub job"), children);
 }
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/containers/search_form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = SearchFormContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function SearchFormContainer(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/_react.default.createElement(_components.SearchForm, null, /*#__PURE__*/_react.default.createElement(_components.SearchForm.Input, {
+    type: "search",
+    placeholder: "Title, companies, expertise"
+  }), /*#__PURE__*/_react.default.createElement(_components.SearchForm.Button, {
+    type: "submit"
+  }, "Search"), children);
+}
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
 "use strict";
 
@@ -35992,12 +36106,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _header = _interopRequireDefault(require("../containers/header"));
 
+var _search_form = _interopRequireDefault(require("../containers/search_form"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js"}],"src/app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
