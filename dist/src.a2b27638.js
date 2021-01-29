@@ -36269,9 +36269,100 @@ Cards.Holder = function CardsHolder(_ref12) {
 
   return /*#__PURE__*/_react.default.createElement(_cards.Holder, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/cards":"src/components/cards/styles/cards.js"}],"src/components/job_checkbox/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/cards":"src/components/cards/styles/cards.js"}],"src/components/job_checkbox/styles/job_checkbox.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"src/components/location_checkboxes/index.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Label = exports.Input = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 8px;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    padding: 16px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Input = _styledComponents.default.input(_templateObject2());
+
+exports.Input = Input;
+
+var Label = _styledComponents.default.label(_templateObject3());
+
+exports.Label = Label;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/job_checkbox/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = JobCheckbox;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _job_checkbox = require("./styles/job_checkbox");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function JobCheckbox(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_checkbox.Container, restProps, children);
+}
+
+JobCheckbox.Input = function JobCheckboxInput(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_checkbox.Input, restProps, children);
+};
+
+JobCheckbox.Label = function JobCheckboxLabel(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_checkbox.Label, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/job_checkbox":"src/components/job_checkbox/styles/job_checkbox.js"}],"src/components/location_checkboxes/index.js":[function(require,module,exports) {
 
 },{}],"src/components/location_search_form/index.js":[function(require,module,exports) {
 
@@ -36516,7 +36607,27 @@ function CardsContainer(_ref) {
     }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours")))));
   }));
 }
-},{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/containers/checkboxes.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = CheckboxesContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CheckboxesContainer(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
+    type: "checkbox"
+  }), /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Label, null, "Full time")));
+}
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36532,12 +36643,14 @@ var _search_form = _interopRequireDefault(require("../containers/search_form"));
 
 var _card = _interopRequireDefault(require("../containers/card"));
 
+var _checkboxes = _interopRequireDefault(require("../containers/checkboxes"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null), /*#__PURE__*/_react.default.createElement(_checkboxes.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js","../containers/card":"src/containers/card.js"}],"src/app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js","../containers/card":"src/containers/card.js","../containers/checkboxes":"src/containers/checkboxes.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
