@@ -37482,9 +37482,14 @@ function CheckboxesContainer(_ref) {
       isChecked = _useState2[0],
       setIsChecked = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      city = _useState4[0],
+      setCity = _useState4[1];
+
   var data = state.data;
 
-  function handleSubmit(e) {
+  function handleChange(e) {
     setIsChecked(e.target.isChecked);
     var filterArray = data.filter(function (data) {
       return data.type === "Full Time";
@@ -37496,12 +37501,31 @@ function CheckboxesContainer(_ref) {
     });
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    setCity(e.target.value);
+    var jobCity = data.filter(function (job) {
+      if (!city) return undefined;
+      return job.location.toLowerCase().includes(city.toLowerCase());
+    });
+    dispatch({
+      type: "JOBS",
+      job: jobCity
+    });
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
     type: "checkbox",
     value: isChecked,
-    onChange: handleSubmit
-  }), /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Label, null, "Full time")), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm, null, /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Input, {
+    onChange: handleChange
+  }), /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Label, null, "Full time")), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm, {
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Input, {
     type: "text",
+    value: city,
+    onChange: function onChange(e) {
+      return setCity(e.target.value);
+    },
     placeholder: "City, state, zip code or country"
   }), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Label, null, "Location")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
     type: "checkbox"
