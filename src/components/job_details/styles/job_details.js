@@ -9,6 +9,12 @@ export const Container = styled.section`
     }
 `;
 
+export const Header = styled.h1`
+    color: black;
+    text-transform: capitalize;
+    font-size: 36px;
+`;
+
 export const FirstArticle = styled.article`
     @media (min-width: 700px) {
         grid-column: 1 / 2;

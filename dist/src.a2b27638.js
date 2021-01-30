@@ -36651,14 +36651,24 @@ function Pageholder(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Description = exports.LocationName = exports.LocationIcon = exports.Location = exports.CompanyName = exports.CompanyContainer = exports.Logo = exports.Company = exports.Button = exports.Time = exports.ClockIcon = exports.TimeContainer = exports.ButtonContainer = exports.Title = exports.TitleContainer = exports.JobTitle = exports.Instruction = exports.SubTitle = exports.LinkText = exports.Icon = exports.LinkContainer = exports.SecondArticle = exports.FirstArticle = exports.Container = void 0;
+exports.Description = exports.LocationName = exports.LocationIcon = exports.Location = exports.CompanyName = exports.CompanyContainer = exports.Logo = exports.Company = exports.Button = exports.Time = exports.ClockIcon = exports.TimeContainer = exports.ButtonContainer = exports.Title = exports.TitleContainer = exports.JobTitle = exports.Instruction = exports.SubTitle = exports.LinkText = exports.Icon = exports.LinkContainer = exports.SecondArticle = exports.FirstArticle = exports.Header = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject24() {
+function _templateObject25() {
   var data = _taggedTemplateLiteral(["\n    color: #334680;\n    margin-block-start: 48px;\n"]);
+
+  _templateObject25 = function _templateObject25() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject24() {
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B9BDCF;\n"]);
 
   _templateObject24 = function _templateObject24() {
     return data;
@@ -36668,7 +36678,7 @@ function _templateObject24() {
 }
 
 function _templateObject23() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B9BDCF;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 24px;\n    height: 24px;\n    margin-block-start: 12px;\n"]);
 
   _templateObject23 = function _templateObject23() {
     return data;
@@ -36678,7 +36688,7 @@ function _templateObject23() {
 }
 
 function _templateObject22() {
-  var data = _taggedTemplateLiteral(["\n    width: 24px;\n    height: 24px;\n    margin-block-start: 12px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
 
   _templateObject22 = function _templateObject22() {
     return data;
@@ -36688,7 +36698,7 @@ function _templateObject22() {
 }
 
 function _templateObject21() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n"]);
 
   _templateObject21 = function _templateObject21() {
     return data;
@@ -36698,7 +36708,7 @@ function _templateObject21() {
 }
 
 function _templateObject20() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 32px;\n"]);
 
   _templateObject20 = function _templateObject20() {
     return data;
@@ -36708,7 +36718,7 @@ function _templateObject20() {
 }
 
 function _templateObject19() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 32px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 70px;\n    height: 70px;\n    border-radius: 4px;\n"]);
 
   _templateObject19 = function _templateObject19() {
     return data;
@@ -36718,7 +36728,7 @@ function _templateObject19() {
 }
 
 function _templateObject18() {
-  var data = _taggedTemplateLiteral(["\n    width: 70px;\n    height: 70px;\n    border-radius: 4px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
 
   _templateObject18 = function _templateObject18() {
     return data;
@@ -36728,7 +36738,7 @@ function _templateObject18() {
 }
 
 function _templateObject17() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 6px;\n    max-width: 18%;\n    border-radius: 4px;\n    border: 1px solid #334680;\n    color: #334680;\n    background-color: #dbdbdb;\n\n    @media (max-width: 506px) {\n        max-width: 20%;\n    }\n\n    @media (min-width: 700px) {\n        position: absolute;\n        max-width: 18%;\n        left: 90%;\n    }\n\n"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -36738,7 +36748,7 @@ function _templateObject17() {
 }
 
 function _templateObject16() {
-  var data = _taggedTemplateLiteral(["\n    padding: 6px;\n    max-width: 18%;\n    border-radius: 4px;\n    border: 1px solid #334680;\n    color: #334680;\n    background-color: #dbdbdb;\n\n    @media (max-width: 506px) {\n        max-width: 20%;\n    }\n\n    @media (min-width: 700px) {\n        position: absolute;\n        max-width: 18%;\n        left: 90%;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B7BCCE;\n"]);
 
   _templateObject16 = function _templateObject16() {
     return data;
@@ -36748,7 +36758,7 @@ function _templateObject16() {
 }
 
 function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B7BCCE;\n"]);
+  var data = _taggedTemplateLiteral([""]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -36758,7 +36768,7 @@ function _templateObject15() {
 }
 
 function _templateObject14() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -36768,7 +36778,7 @@ function _templateObject14() {
 }
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column-reverse;\n"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -36778,7 +36788,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column-reverse;\n"]);
+  var data = _taggedTemplateLiteral([""]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -36788,7 +36798,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    \n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -36798,7 +36808,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    \n"]);
+  var data = _taggedTemplateLiteral([""]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -36818,7 +36828,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    color: #B9BDCF;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -36828,7 +36838,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    color: #B9BDCF;\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    margin-inline-start: 16px;\n    color: #1E86FF;\n;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -36838,7 +36848,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    margin-inline-start: 16px;\n    color: #1E86FF;\n;\n"]);
+  var data = _taggedTemplateLiteral(["\n    \n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36848,7 +36858,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    \n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36858,7 +36868,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 700px) {\n        grid-column: 2 / 4;\n    }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36868,7 +36878,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    @media (min-width: 700px) {\n        grid-column: 2 / 4;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 700px) {\n        grid-column: 1 / 2;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36878,7 +36888,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    @media (min-width: 700px) {\n        grid-column: 1 / 2;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: black;\n    text-transform: capitalize;\n    font-size: 36px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36903,95 +36913,99 @@ var Container = _styledComponents.default.section(_templateObject());
 
 exports.Container = Container;
 
-var FirstArticle = _styledComponents.default.article(_templateObject2());
+var Header = _styledComponents.default.h1(_templateObject2());
+
+exports.Header = Header;
+
+var FirstArticle = _styledComponents.default.article(_templateObject3());
 
 exports.FirstArticle = FirstArticle;
 
-var SecondArticle = _styledComponents.default.article(_templateObject3());
+var SecondArticle = _styledComponents.default.article(_templateObject4());
 
 exports.SecondArticle = SecondArticle;
 
-var LinkContainer = _styledComponents.default.div(_templateObject4());
+var LinkContainer = _styledComponents.default.div(_templateObject5());
 
 exports.LinkContainer = LinkContainer;
 
-var Icon = _styledComponents.default.img(_templateObject5());
+var Icon = _styledComponents.default.img(_templateObject6());
 
 exports.Icon = Icon;
 
-var LinkText = _styledComponents.default.p(_templateObject6());
+var LinkText = _styledComponents.default.p(_templateObject7());
 
 exports.LinkText = LinkText;
 
-var SubTitle = _styledComponents.default.h3(_templateObject7());
+var SubTitle = _styledComponents.default.h3(_templateObject8());
 
 exports.SubTitle = SubTitle;
 
-var Instruction = _styledComponents.default.p(_templateObject8());
+var Instruction = _styledComponents.default.p(_templateObject9());
 
 exports.Instruction = Instruction;
 
-var JobTitle = _styledComponents.default.div(_templateObject9());
+var JobTitle = _styledComponents.default.div(_templateObject10());
 
 exports.JobTitle = JobTitle;
 
-var TitleContainer = _styledComponents.default.div(_templateObject10());
+var TitleContainer = _styledComponents.default.div(_templateObject11());
 
 exports.TitleContainer = TitleContainer;
 
-var Title = _styledComponents.default.h2(_templateObject11());
+var Title = _styledComponents.default.h2(_templateObject12());
 
 exports.Title = Title;
 
-var ButtonContainer = _styledComponents.default.div(_templateObject12());
+var ButtonContainer = _styledComponents.default.div(_templateObject13());
 
 exports.ButtonContainer = ButtonContainer;
 
-var TimeContainer = _styledComponents.default.div(_templateObject13());
+var TimeContainer = _styledComponents.default.div(_templateObject14());
 
 exports.TimeContainer = TimeContainer;
 
-var ClockIcon = _styledComponents.default.img(_templateObject14());
+var ClockIcon = _styledComponents.default.img(_templateObject15());
 
 exports.ClockIcon = ClockIcon;
 
-var Time = _styledComponents.default.p(_templateObject15());
+var Time = _styledComponents.default.p(_templateObject16());
 
 exports.Time = Time;
 
-var Button = _styledComponents.default.button(_templateObject16());
+var Button = _styledComponents.default.button(_templateObject17());
 
 exports.Button = Button;
 
-var Company = _styledComponents.default.div(_templateObject17());
+var Company = _styledComponents.default.div(_templateObject18());
 
 exports.Company = Company;
 
-var Logo = _styledComponents.default.img(_templateObject18());
+var Logo = _styledComponents.default.img(_templateObject19());
 
 exports.Logo = Logo;
 
-var CompanyContainer = _styledComponents.default.div(_templateObject19());
+var CompanyContainer = _styledComponents.default.div(_templateObject20());
 
 exports.CompanyContainer = CompanyContainer;
 
-var CompanyName = _styledComponents.default.h3(_templateObject20());
+var CompanyName = _styledComponents.default.h3(_templateObject21());
 
 exports.CompanyName = CompanyName;
 
-var Location = _styledComponents.default.div(_templateObject21());
+var Location = _styledComponents.default.div(_templateObject22());
 
 exports.Location = Location;
 
-var LocationIcon = _styledComponents.default.img(_templateObject22());
+var LocationIcon = _styledComponents.default.img(_templateObject23());
 
 exports.LocationIcon = LocationIcon;
 
-var LocationName = _styledComponents.default.p(_templateObject23());
+var LocationName = _styledComponents.default.p(_templateObject24());
 
 exports.LocationName = LocationName;
 
-var Description = _styledComponents.default.p(_templateObject24());
+var Description = _styledComponents.default.p(_templateObject25());
 
 exports.Description = Description;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/job_details/index.js":[function(require,module,exports) {
@@ -37021,165 +37035,172 @@ function JobDetails(_ref) {
   return /*#__PURE__*/_react.default.createElement(_job_details.Container, restProps, children);
 }
 
-JobDetails.FirstArticle = function JobDetailsFirstArticle(_ref2) {
+JobDetails.Header = function JobDetailsHeader(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Header, restProps, children);
+};
+
+JobDetails.FirstArticle = function JobDetailsFirstArticle(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.FirstArticle, restProps, children);
 };
 
-JobDetails.SecondArticle = function JobDetailsSecondArticle(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
+JobDetails.SecondArticle = function JobDetailsSecondArticle(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.SecondArticle, restProps, children);
 };
 
-JobDetails.LinkContainer = function JobDetailsLinkContainer(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
+JobDetails.LinkContainer = function JobDetailsLinkContainer(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.LinkContainer, restProps, children);
 };
 
-JobDetails.Icon = function JobDetailsIcon(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
+JobDetails.Icon = function JobDetailsIcon(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Icon, restProps, children);
 };
 
-JobDetails.LinkText = function JobDetailsLinkText(_ref6) {
-  var to = _ref6.to,
-      restProps = _objectWithoutProperties(_ref6, ["to"]);
+JobDetails.LinkText = function JobDetailsLinkText(_ref7) {
+  var to = _ref7.to,
+      restProps = _objectWithoutProperties(_ref7, ["to"]);
 
   return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: to
   }, /*#__PURE__*/_react.default.createElement(_job_details.LinkText, restProps));
 };
 
-JobDetails.SubTitle = function JobDetailsSubTitle(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
+JobDetails.SubTitle = function JobDetailsSubTitle(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.SubTitle, restProps, children);
 };
 
-JobDetails.Instruction = function JobDetailsInstruction(_ref8) {
-  var children = _ref8.children,
-      restProps = _objectWithoutProperties(_ref8, ["children"]);
+JobDetails.Instruction = function JobDetailsInstruction(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Instruction, restProps, children);
 };
 
-JobDetails.JobTitle = function JobDetailsJobTitle(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
+JobDetails.JobTitle = function JobDetailsJobTitle(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.JobTitle, restProps, children);
 };
 
-JobDetails.TitleContainer = function JobDetailsTitleContainer(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
+JobDetails.TitleContainer = function JobDetailsTitleContainer(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.TitleContainer, restProps, children);
 };
 
-JobDetails.Title = function JobDetailsTitle(_ref11) {
-  var children = _ref11.children,
-      restProps = _objectWithoutProperties(_ref11, ["children"]);
+JobDetails.Title = function JobDetailsTitle(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Title, restProps, children);
 };
 
-JobDetails.ButtonContainer = function JobDetailsButtonContainer(_ref12) {
-  var children = _ref12.children,
-      restProps = _objectWithoutProperties(_ref12, ["children"]);
+JobDetails.ButtonContainer = function JobDetailsButtonContainer(_ref13) {
+  var children = _ref13.children,
+      restProps = _objectWithoutProperties(_ref13, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.ButtonContainer, restProps, children);
 };
 
-JobDetails.TimeContainer = function JobDetailsTimeContainer(_ref13) {
-  var children = _ref13.children,
-      restProps = _objectWithoutProperties(_ref13, ["children"]);
+JobDetails.TimeContainer = function JobDetailsTimeContainer(_ref14) {
+  var children = _ref14.children,
+      restProps = _objectWithoutProperties(_ref14, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.TimeContainer, restProps, children);
 };
 
-JobDetails.ClockIcon = function JobDetailsClockIcon(_ref14) {
-  var children = _ref14.children,
-      restProps = _objectWithoutProperties(_ref14, ["children"]);
+JobDetails.ClockIcon = function JobDetailsClockIcon(_ref15) {
+  var children = _ref15.children,
+      restProps = _objectWithoutProperties(_ref15, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.ClockIcon, restProps, children);
 };
 
-JobDetails.Time = function JobDetailsTime(_ref15) {
-  var children = _ref15.children,
-      restProps = _objectWithoutProperties(_ref15, ["children"]);
+JobDetails.Time = function JobDetailsTime(_ref16) {
+  var children = _ref16.children,
+      restProps = _objectWithoutProperties(_ref16, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Time, restProps, children);
 };
 
-JobDetails.Button = function JobDetailsButton(_ref16) {
-  var children = _ref16.children,
-      restProps = _objectWithoutProperties(_ref16, ["children"]);
+JobDetails.Button = function JobDetailsButton(_ref17) {
+  var children = _ref17.children,
+      restProps = _objectWithoutProperties(_ref17, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Button, restProps, children);
 };
 
-JobDetails.Company = function JobDetailsCompany(_ref17) {
-  var children = _ref17.children,
-      restProps = _objectWithoutProperties(_ref17, ["children"]);
+JobDetails.Company = function JobDetailsCompany(_ref18) {
+  var children = _ref18.children,
+      restProps = _objectWithoutProperties(_ref18, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Company, restProps, children);
 };
 
-JobDetails.Logo = function JobDetailsLogo(_ref18) {
-  var children = _ref18.children,
-      restProps = _objectWithoutProperties(_ref18, ["children"]);
+JobDetails.Logo = function JobDetailsLogo(_ref19) {
+  var children = _ref19.children,
+      restProps = _objectWithoutProperties(_ref19, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Logo, restProps, children);
 };
 
-JobDetails.CompanyContainer = function JobDetailsCompanyContainer(_ref19) {
-  var children = _ref19.children,
-      restProps = _objectWithoutProperties(_ref19, ["children"]);
+JobDetails.CompanyContainer = function JobDetailsCompanyContainer(_ref20) {
+  var children = _ref20.children,
+      restProps = _objectWithoutProperties(_ref20, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.CompanyContainer, restProps, children);
 };
 
-JobDetails.CompanyName = function JobDetailsCompanyName(_ref20) {
-  var children = _ref20.children,
-      restProps = _objectWithoutProperties(_ref20, ["children"]);
+JobDetails.CompanyName = function JobDetailsCompanyName(_ref21) {
+  var children = _ref21.children,
+      restProps = _objectWithoutProperties(_ref21, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.CompanyName, restProps, children);
 };
 
-JobDetails.Location = function JobDetailsLocation(_ref21) {
-  var children = _ref21.children,
-      restProps = _objectWithoutProperties(_ref21, ["children"]);
+JobDetails.Location = function JobDetailsLocation(_ref22) {
+  var children = _ref22.children,
+      restProps = _objectWithoutProperties(_ref22, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Location, restProps, children);
 };
 
-JobDetails.LocationIcon = function JobDetailsLocationIcon(_ref22) {
-  var children = _ref22.children,
-      restProps = _objectWithoutProperties(_ref22, ["children"]);
+JobDetails.LocationIcon = function JobDetailsLocationIcon(_ref23) {
+  var children = _ref23.children,
+      restProps = _objectWithoutProperties(_ref23, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.LocationIcon, restProps, children);
 };
 
-JobDetails.LocationName = function JobDetailsLocationName(_ref23) {
-  var children = _ref23.children,
-      restProps = _objectWithoutProperties(_ref23, ["children"]);
+JobDetails.LocationName = function JobDetailsLocationName(_ref24) {
+  var children = _ref24.children,
+      restProps = _objectWithoutProperties(_ref24, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.LocationName, restProps, children);
 };
 
-JobDetails.Description = function JobDetailsDescription(_ref24) {
-  var children = _ref24.children,
-      restProps = _objectWithoutProperties(_ref24, ["children"]);
+JobDetails.Description = function JobDetailsDescription(_ref25) {
+  var children = _ref25.children,
+      restProps = _objectWithoutProperties(_ref25, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_job_details.Description, restProps, children);
 };
@@ -37728,7 +37749,7 @@ function JobDetailsContainer(_ref) {
   console.log(findId);
   var time = new Date().getTime() - new Date(findId.created_at).getTime();
   var result = Math.floor(time / (1000 * 60 * 60 * 24));
-  return /*#__PURE__*/_react.default.createElement(_components.JobDetails, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.FirstArticle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Icon, {
+  return /*#__PURE__*/_react.default.createElement(_components.JobDetails, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Header, null, /*#__PURE__*/_react.default.createElement("b", null, "Github"), " jobs"), /*#__PURE__*/_react.default.createElement(_components.JobDetails.FirstArticle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Icon, {
     src: "./images/keyboard_backspace-24px.svg",
     alt: "Go back"
   }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkText, {

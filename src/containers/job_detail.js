@@ -1,9 +1,6 @@
 import React, {useContext} from 'react';
-
 import {useParams} from 'react-router-dom';
-
 import {Context} from '../context/context';
-
 import {JobDetails} from '../components';
 
 export default function JobDetailsContainer({children}) {
@@ -19,6 +16,7 @@ export default function JobDetailsContainer({children}) {
 
     return (
         <JobDetails>
+            <JobDetails.Header><b>Github</b> jobs</JobDetails.Header>
             <JobDetails.FirstArticle>
                 <JobDetails.LinkContainer>
                     <JobDetails.Icon src="./images/keyboard_backspace-24px.svg" alt="Go back" />

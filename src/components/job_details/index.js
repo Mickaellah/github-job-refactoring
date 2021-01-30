@@ -4,6 +4,7 @@ import {Link as ReachRouterLink} from 'react-router-dom';
 
 import {
     Container, 
+    Header,
     FirstArticle, 
     SecondArticle,
     LinkContainer,
@@ -31,6 +32,10 @@ import {
 
 export default function JobDetails({children, ...restProps}) {
     return <Container {...restProps}>{children}</Container>
+}
+
+JobDetails.Header = function JobDetailsHeader({children, ...restProps}) {
+    return <Header {...restProps}>{children}</Header>
 }
 
 JobDetails.FirstArticle = function JobDetailsFirstArticle({children, ...restProps}) {
