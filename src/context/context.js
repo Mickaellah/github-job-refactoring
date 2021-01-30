@@ -42,7 +42,6 @@ export default function ContextProvider({children}) {
             .then(response => response.json())
             .then(data => {
                 dispatch({type: "LOADING", data: data});
-                console.log(data);
             });
     }, []);
 

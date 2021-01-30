@@ -25,6 +25,41 @@ export default function CheckboxesContainer({children}) {
         dispatch({type: "JOBS", job: jobCity});
     }
 
+    function handleLondon(e) {
+        setIsChecked(e.target.isChecked)
+
+        const filterArr = state.data.filter(job => job.location === "London");
+        dispatch({type: "JOBS", job: filterArr});
+    }
+
+    function handleAmsterdam(e) {
+        setIsChecked(e.target.isChecked);
+
+        const filterArr = state.data.filter(job => job.location === "Amsterdam");
+        dispatch({type: "JOBS", job: filterArr});
+    }
+
+    function handleNewYork(e) {
+        setIsChecked(e.target.isChecked);
+
+        const filterArr = state.data.filter(job => job.location === "New York City");
+        dispatch({type: "JOBS", job: filterArr});
+    }
+
+    function handleBerlin(e) {
+        setIsChecked(e.target.isChecked);
+
+        const filterArr = state.data.filter(job => job.location === "Berlin");
+        dispatch({type: "JOBS", job: filterArr});
+    }
+
+    function handleUnitedStates(e) {
+        setIsChecked(e.target.isChecked);
+
+        const filterArr = state.data.filter(job => job.location === "United States");
+        dispatch({type: "JOBS", job: filterArr});
+    }
+
     return (
         <div>
             <JobCheckbox>
@@ -37,27 +72,33 @@ export default function CheckboxesContainer({children}) {
             </LocationSearchForm>
             <LocationCheckboxes>
                 <LocationCheckboxes.Fieldset>
-                    <LocationCheckboxes.Input type="checkbox" />
+                    <LocationCheckboxes.Input type="checkbox" value={isChecked} onChange={handleLondon} />
                     <LocationCheckboxes.Label>
                         London
                     </LocationCheckboxes.Label>
                 </LocationCheckboxes.Fieldset>
                 <LocationCheckboxes.Fieldset>
-                    <LocationCheckboxes.Input type="checkbox" />
+                    <LocationCheckboxes.Input type="checkbox" value={isChecked} onChange={handleAmsterdam} />
                     <LocationCheckboxes.Label>
                         Amsterdam
                     </LocationCheckboxes.Label>
                 </LocationCheckboxes.Fieldset>
                 <LocationCheckboxes.Fieldset>
-                    <LocationCheckboxes.Input type="checkbox" />
+                    <LocationCheckboxes.Input type="checkbox" value={isChecked} onChange={handleNewYork} />
                     <LocationCheckboxes.Label>
                         New York
                     </LocationCheckboxes.Label>
                 </LocationCheckboxes.Fieldset>
                 <LocationCheckboxes.Fieldset>
-                    <LocationCheckboxes.Input type="checkbox" />
+                    <LocationCheckboxes.Input type="checkbox" value={isChecked} onChange={handleBerlin} />
                     <LocationCheckboxes.Label>
                         Berlin
+                    </LocationCheckboxes.Label>
+                </LocationCheckboxes.Fieldset>
+                <LocationCheckboxes.Fieldset>
+                    <LocationCheckboxes.Input type="checkbox" value={isChecked} onChange={handleUnitedStates} />
+                    <LocationCheckboxes.Label>
+                        United States
                     </LocationCheckboxes.Label>
                 </LocationCheckboxes.Fieldset>
             </LocationCheckboxes>

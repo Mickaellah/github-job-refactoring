@@ -37361,7 +37361,6 @@ function ContextProvider(_ref) {
         type: "LOADING",
         data: data
       });
-      console.log(data);
     });
   }, []);
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
@@ -37514,6 +37513,61 @@ function CheckboxesContainer(_ref) {
     });
   }
 
+  function handleLondon(e) {
+    setIsChecked(e.target.isChecked);
+    var filterArr = state.data.filter(function (job) {
+      return job.location === "London";
+    });
+    dispatch({
+      type: "JOBS",
+      job: filterArr
+    });
+  }
+
+  function handleAmsterdam(e) {
+    setIsChecked(e.target.isChecked);
+    var filterArr = state.data.filter(function (job) {
+      return job.location === "Amsterdam";
+    });
+    dispatch({
+      type: "JOBS",
+      job: filterArr
+    });
+  }
+
+  function handleNewYork(e) {
+    setIsChecked(e.target.isChecked);
+    var filterArr = state.data.filter(function (job) {
+      return job.location === "New York City";
+    });
+    dispatch({
+      type: "JOBS",
+      job: filterArr
+    });
+  }
+
+  function handleBerlin(e) {
+    setIsChecked(e.target.isChecked);
+    var filterArr = state.data.filter(function (job) {
+      return job.location === "Berlin";
+    });
+    dispatch({
+      type: "JOBS",
+      job: filterArr
+    });
+  }
+
+  function handleUnitedStates(e) {
+    setIsChecked(e.target.isChecked);
+    var filterArr = state.data.filter(function (job) {
+      return job.location === "United States";
+    });
+    dispatch({
+      type: "JOBS",
+      job: filterArr
+    });
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
     type: "checkbox",
     value: isChecked,
@@ -37528,14 +37582,26 @@ function CheckboxesContainer(_ref) {
     },
     placeholder: "City, state, zip code or country"
   }), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Label, null, "Location")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
+    type: "checkbox",
+    value: isChecked,
+    onChange: handleLondon
   }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "London")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
+    type: "checkbox",
+    value: isChecked,
+    onChange: handleAmsterdam
   }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "Amsterdam")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
+    type: "checkbox",
+    value: isChecked,
+    onChange: handleNewYork
   }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "New York")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
-  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "Berlin"))));
+    type: "checkbox",
+    value: isChecked,
+    onChange: handleBerlin
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "Berlin")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
+    type: "checkbox",
+    value: isChecked,
+    onChange: handleUnitedStates
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "United States"))));
 }
 },{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/containers/card.js":[function(require,module,exports) {
 "use strict";
@@ -37563,7 +37629,6 @@ function CardsContainer(_ref) {
 
   var data = state.data,
       loading = state.loading;
-  console.log(data);
   return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, data && data.map(function (job) {
     var time = new Date().getTime() - new Date(job.created_at).getTime();
     var result = Math.floor(time / (1000 * 60 * 60 * 24));
@@ -37730,8 +37795,6 @@ function App() {
 
   var data = state.data,
       loading = state.loading;
-  console.log(data);
-  console.log(loading);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), !loading && data && /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"

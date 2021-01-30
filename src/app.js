@@ -10,8 +10,6 @@ import {Context} from './context/context';
 export default function App() {
     const {state} = useContext(Context);
     const {data, loading} = state;
-    console.log(data);
-    console.log(loading);
 
     return (
         <>

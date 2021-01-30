@@ -7,8 +7,6 @@ export default function CardsContainer({children}) {
     const {state} = useContext(Context);
     const {data, loading} = state;
 
-    console.log(data);
-
     return (
         <Cards.Group>
             {data && data.map(job => {
