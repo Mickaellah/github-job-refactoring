@@ -61,7 +61,7 @@ export default function CheckboxesContainer({children}) {
     }
 
     return (
-        <div>
+        <section>
             <JobCheckbox>
                 <JobCheckbox.Input type="checkbox" value={isChecked} onChange={handleChange} />
                 <JobCheckbox.Label>Full time</JobCheckbox.Label>
@@ -102,6 +102,6 @@ export default function CheckboxesContainer({children}) {
                     </LocationCheckboxes.Label>
                 </LocationCheckboxes.Fieldset>
             </LocationCheckboxes>
-        </div>
+        </section>
     )
 }

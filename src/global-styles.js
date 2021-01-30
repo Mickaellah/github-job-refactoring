@@ -1,7 +1,14 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+    @font-face {
+        font-family: "Roboto Regular";
+        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+            url('./fonts/Roboto-Regular.woff') format('woff');
+        font-weight: 400;
+    }
     html, body {
+        font-family: "Roboto Regular";
         font-size: 16px;
         margin: 0;
         padding: 16px;

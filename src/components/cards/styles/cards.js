@@ -24,7 +24,9 @@ export const List = styled.div`
     }
 `;
 
-export const Header = styled.h3``;
+export const Header = styled.h3`
+    font-size: 12px;
+`;
 
 export const Group = styled.article``;
 
@@ -32,7 +34,9 @@ export const Content = styled.div`
     grid-column: 2 / 4;
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+    font-size: 18px;
+`;
 
 export const Button = styled.button`
     border: 1px solid #334680;
@@ -49,10 +53,14 @@ export const Logo = styled.img`
 
 export const Time = styled.p`
     margin-inline-start: 16px;
+    font-size: 12px;
+    margin-block-start: 16px;
 `;
 
 export const City = styled.p`
     margin-inline-start: 16px;
+    font-size: 12px;
+    margin-block-start: 16px;
 `;
 
 export const LocationContainer = styled.div`

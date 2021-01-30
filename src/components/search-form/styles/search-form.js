@@ -25,6 +25,7 @@ export const Input = styled.input`
 
     ::placeholder {
         color: #b9bdcf;
+        font-size: 12px;
     }
 
     @media (min-width: 600px) {

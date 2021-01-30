@@ -35837,7 +35837,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    font-style: 36px;\n    font-weight: bold;\n    text-transform: uppercase;\n    color: black;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-weight: 700;\n    font-style: 24px;\n    text-transform: uppercase;\n    color: black;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -35919,7 +35919,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding-right: 30%;\n    padding-block: 16px;\n    border-radius: 5px;\n    border: none;\n    background-color: #ffffff;\n    padding-inline-start: 48px;\n    color: #dbdbdb;\n    margin-block-start: 8px;\n    background-image: url('./images/work_outline-24px.svg');\n    background-repeat: no-repeat;\n    background-position: 2% 50%;\n\n    ::placeholder {\n        color: #b9bdcf;\n    }\n\n    @media (min-width: 600px) {\n        padding-inline-start: 64px;\n    } \n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding-right: 30%;\n    padding-block: 16px;\n    border-radius: 5px;\n    border: none;\n    background-color: #ffffff;\n    padding-inline-start: 48px;\n    color: #dbdbdb;\n    margin-block-start: 8px;\n    background-image: url('./images/work_outline-24px.svg');\n    background-repeat: no-repeat;\n    background-position: 2% 50%;\n\n    ::placeholder {\n        color: #b9bdcf;\n        font-size: 12px;\n    }\n\n    @media (min-width: 600px) {\n        padding-inline-start: 64px;\n    } \n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36022,7 +36022,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    font-size: 12px;\n    margin-block-start: 16px;\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -36032,7 +36032,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    font-size: 12px;\n    margin-block-start: 16px;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -36062,7 +36062,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 18px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -36092,7 +36092,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 12px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36307,7 +36307,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 8px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 8px;\n    font-size: 14px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36400,7 +36400,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 8px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 8px;\n    font-size: 14px;\n    font-weight: 500;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36514,7 +36514,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    text-transform: uppercase;\n    color: #b9bdcf;\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-transform: uppercase;\n    color: #b9bdcf;\n    font-size: 14px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36524,7 +36524,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    padding: 12px;\n    padding-inline-start: 48px;\n    margin-block-start: 16px;\n    border: none;\n    border-radius: 4px;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n    background-image: url('./images/public-24px.svg');\n    background-position: 2% 50%;\n    background-repeat: no-repeat;\n\n    ::placeholder {\n        color: #b9bdcf;\n    }\n\n    @media (min-width: 600px) {\n        padding-inline-start: 64px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    padding: 12px;\n    padding-inline-start: 48px;\n    margin-block-start: 16px;\n    border: none;\n    border-radius: 4px;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n    background-image: url('./images/public-24px.svg');\n    background-position: 2% 50%;\n    background-repeat: no-repeat;\n\n    ::placeholder {\n        color: #b9bdcf;\n        font-size: 12px;\n    }\n\n    @media (min-width: 600px) {\n        padding-inline-start: 64px;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36668,7 +36668,7 @@ function _templateObject25() {
 }
 
 function _templateObject24() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B9BDCF;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B9BDCF;\n    font-size: 12px;\n    margin-block-start: 16px;\n"]);
 
   _templateObject24 = function _templateObject24() {
     return data;
@@ -36698,7 +36698,7 @@ function _templateObject22() {
 }
 
 function _templateObject21() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    font-size: 18px;\n"]);
 
   _templateObject21 = function _templateObject21() {
     return data;
@@ -36728,7 +36728,7 @@ function _templateObject19() {
 }
 
 function _templateObject18() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    margin-block-start: 32px;\n"]);
 
   _templateObject18 = function _templateObject18() {
     return data;
@@ -36738,7 +36738,7 @@ function _templateObject18() {
 }
 
 function _templateObject17() {
-  var data = _taggedTemplateLiteral(["\n    padding: 6px;\n    max-width: 18%;\n    border-radius: 4px;\n    border: 1px solid #334680;\n    color: #334680;\n    background-color: #dbdbdb;\n\n    @media (max-width: 506px) {\n        max-width: 20%;\n    }\n\n    @media (min-width: 700px) {\n        position: absolute;\n        max-width: 18%;\n        left: 90%;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 6px;\n    max-width: 18%;\n    border-radius: 4px;\n    border: 1px solid #334680;\n    color: #334680;\n    background-color: #dbdbdb;\n    font-size: 12px;\n\n    @media (max-width: 506px) {\n        max-width: 20%;\n    }\n\n    @media (min-width: 700px) {\n        position: absolute;\n        max-width: 18%;\n        left: 90%;\n    }\n\n"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -36748,7 +36748,7 @@ function _templateObject17() {
 }
 
 function _templateObject16() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B7BCCE;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    color: #B7BCCE;\n    font-size: 12px;\n    margin-block-start: 16px;\n"]);
 
   _templateObject16 = function _templateObject16() {
     return data;
@@ -36788,7 +36788,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 24px;\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -36818,7 +36818,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 14px;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -36828,7 +36828,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    color: #B9BDCF;\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: #B9BDCF;\n    font-size: 14px;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -36838,7 +36838,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    margin-inline-start: 16px;\n    color: #1E86FF;\n;\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    margin-inline-start: 16px;\n    color: #1E86FF;\n    font-size: 14px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -36888,7 +36888,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    color: black;\n    text-transform: capitalize;\n    font-size: 36px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: black;\n    text-transform: capitalize;\n    font-size: 24px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -37589,7 +37589,7 @@ function CheckboxesContainer(_ref) {
     });
   }
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
+  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
     type: "checkbox",
     value: isChecked,
     onChange: handleChange
@@ -37834,7 +37834,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    html, body {\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

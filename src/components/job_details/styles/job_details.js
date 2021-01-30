@@ -12,7 +12,7 @@ export const Container = styled.section`
 export const Header = styled.h1`
     color: black;
     text-transform: capitalize;
-    font-size: 36px;
+    font-size: 24px;
 `;
 
 export const FirstArticle = styled.article`
@@ -39,14 +39,17 @@ export const LinkText = styled.p`
     text-decoration: none;
     margin-inline-start: 16px;
     color: #1E86FF;
-;
+    font-size: 14px;
 `;
 
 export const SubTitle = styled.h3`
     color: #B9BDCF;
+    font-size: 14px;
 `;
 
-export const Instruction = styled.p``;
+export const Instruction = styled.p`
+    font-size: 14px;
+`;
 
 export const JobTitle = styled.div``;
 
@@ -54,7 +57,9 @@ export const TitleContainer = styled.div`
     
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+    font-size: 24px;
+`;
 
 export const ButtonContainer = styled.div`
     display: flex;
@@ -70,6 +75,8 @@ export const ClockIcon = styled.img``;
 export const Time = styled.p`
     margin-inline-start: 16px;
     color: #B7BCCE;
+    font-size: 12px;
+    margin-block-start: 16px;
 `;
 
 export const Button = styled.button`
@@ -79,6 +86,7 @@ export const Button = styled.button`
     border: 1px solid #334680;
     color: #334680;
     background-color: #dbdbdb;
+    font-size: 12px;
 
     @media (max-width: 506px) {
         max-width: 20%;
@@ -94,6 +102,7 @@ export const Button = styled.button`
 
 export const Company = styled.div`
     display: flex;
+    margin-block-start: 32px;
 `;
 
 export const Logo = styled.img`
@@ -108,6 +117,7 @@ export const CompanyContainer = styled.div`
 
 export const CompanyName = styled.h3`
     margin: 0;
+    font-size: 18px;
 `;
 
 export const Location = styled.div`
@@ -123,6 +133,8 @@ export const LocationIcon = styled.img`
 export const LocationName = styled.p`
     margin-inline-start: 16px;
     color: #B9BDCF;
+    font-size: 12px;
+    margin-block-start: 16px;
 `;
 
 export const Description = styled.p`
