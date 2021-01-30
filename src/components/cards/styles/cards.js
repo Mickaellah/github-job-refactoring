@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    @media (min-width: 600px) {
-        margin-inline-start: 32px;
-    }
+
 `;
 
 export const List = styled.div`

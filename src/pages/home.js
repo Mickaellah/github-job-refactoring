@@ -1,8 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../containers/header';
 import SearchFormContainer from '../containers/search_form';
-// import CardsContainer from '../containers/card';
-// import CheckboxesContainer from '../containers/checkboxes';
 import PageholderContainer from '../containers/pageholder';
 
 export default function Home() {
@@ -10,8 +8,6 @@ export default function Home() {
         <>
             <HeaderContainer />
             <SearchFormContainer />
-            {/* <CheckboxesContainer />
-            <CardsContainer /> */}
             <PageholderContainer />
         </>
     )

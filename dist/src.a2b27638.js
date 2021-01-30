@@ -36112,7 +36112,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @media (min-width: 600px) {\n        margin-inline-start: 32px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36940,8 +36940,6 @@ var _pageholder = _interopRequireDefault(require("../containers/pageholder"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import CardsContainer from '../containers/card';
-// import CheckboxesContainer from '../containers/checkboxes';
 function Home() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null), /*#__PURE__*/_react.default.createElement(_pageholder.default, null));
 }
