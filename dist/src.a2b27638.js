@@ -35995,14 +35995,24 @@ SearchForm.Button = function SearchFormButton(_ref3) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Holder = exports.LocationContainer = exports.City = exports.Time = exports.Logo = exports.Button = exports.Title = exports.Content = exports.Group = exports.Header = exports.List = exports.Container = void 0;
+exports.Holder = exports.LocationContainer = exports.City = exports.Time = exports.Logo = exports.Button = exports.Title = exports.Content = exports.Group = exports.Header = exports.List = exports.LinkText = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject12() {
+function _templateObject13() {
   var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 16px;\n\n    @media (min-width: 1000px) {\n        margin-inline-start: 50%;\n    }\n"]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -36012,7 +36022,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -36032,7 +36042,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -36042,7 +36052,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    border: 1px solid #334680;\n    border-radius: 5px;\n    padding: 8px;\n    background-color: white;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -36052,7 +36062,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    border: 1px solid #334680;\n    border-radius: 5px;\n    padding: 8px;\n    background-color: white;\n"]);
+  var data = _taggedTemplateLiteral([""]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -36062,7 +36072,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 2 / 4;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36072,7 +36082,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    grid-column: 2 / 4;\n"]);
+  var data = _taggedTemplateLiteral([""]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36092,7 +36102,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n    margin-inline-start: 32px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36102,7 +36112,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n    margin-inline-start: 32px;\n"]);
+  var data = _taggedTemplateLiteral(["\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36127,47 +36137,51 @@ var Container = _styledComponents.default.div(_templateObject());
 
 exports.Container = Container;
 
-var List = _styledComponents.default.div(_templateObject2());
+var LinkText = _styledComponents.default.p(_templateObject2());
+
+exports.LinkText = LinkText;
+
+var List = _styledComponents.default.div(_templateObject3());
 
 exports.List = List;
 
-var Header = _styledComponents.default.h3(_templateObject3());
+var Header = _styledComponents.default.h3(_templateObject4());
 
 exports.Header = Header;
 
-var Group = _styledComponents.default.div(_templateObject4());
+var Group = _styledComponents.default.div(_templateObject5());
 
 exports.Group = Group;
 
-var Content = _styledComponents.default.div(_templateObject5());
+var Content = _styledComponents.default.div(_templateObject6());
 
 exports.Content = Content;
 
-var Title = _styledComponents.default.h2(_templateObject6());
+var Title = _styledComponents.default.h2(_templateObject7());
 
 exports.Title = Title;
 
-var Button = _styledComponents.default.button(_templateObject7());
+var Button = _styledComponents.default.button(_templateObject8());
 
 exports.Button = Button;
 
-var Logo = _styledComponents.default.img(_templateObject8());
+var Logo = _styledComponents.default.img(_templateObject9());
 
 exports.Logo = Logo;
 
-var Time = _styledComponents.default.p(_templateObject9());
+var Time = _styledComponents.default.p(_templateObject10());
 
 exports.Time = Time;
 
-var City = _styledComponents.default.p(_templateObject10());
+var City = _styledComponents.default.p(_templateObject11());
 
 exports.City = City;
 
-var LocationContainer = _styledComponents.default.div(_templateObject11());
+var LocationContainer = _styledComponents.default.div(_templateObject12());
 
 exports.LocationContainer = LocationContainer;
 
-var Holder = _styledComponents.default.div(_templateObject12());
+var Holder = _styledComponents.default.div(_templateObject13());
 
 exports.Holder = Holder;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/cards/index.js":[function(require,module,exports) {
@@ -36179,6 +36193,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = Cards;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
 
 var _cards = require("./styles/cards");
 
@@ -36202,74 +36218,83 @@ Cards.Header = function CardsHeader(_ref2) {
   return /*#__PURE__*/_react.default.createElement(_cards.Header, restProps, children);
 };
 
-Cards.Group = function CardsGroup(_ref3) {
-  var children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["children"]);
+Cards.LinkText = function CardsLinkText(_ref3) {
+  var to = _ref3.to,
+      restProps = _objectWithoutProperties(_ref3, ["to"]);
+
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: to
+  }, /*#__PURE__*/_react.default.createElement(_cards.LinkText, restProps));
+};
+
+Cards.Group = function CardsGroup(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Group, restProps, children);
 };
 
-Cards.List = function CardsList(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
+Cards.List = function CardsList(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.List, restProps, children);
 };
 
-Cards.Content = function CardsContent(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
+Cards.Content = function CardsContent(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Content, restProps, children);
 };
 
-Cards.Logo = function CardsLogo(_ref6) {
-  var restProps = Object.assign({}, _ref6);
+Cards.Logo = function CardsLogo(_ref7) {
+  var restProps = Object.assign({}, _ref7);
   return /*#__PURE__*/_react.default.createElement(_cards.Logo, restProps);
 };
 
-Cards.Title = function CardsTitle(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
+Cards.Title = function CardsTitle(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Title, restProps, children);
 };
 
-Cards.Button = function CardsButton(_ref8) {
-  var children = _ref8.children,
-      restProps = _objectWithoutProperties(_ref8, ["children"]);
+Cards.Button = function CardsButton(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Button, restProps, children);
 };
 
-Cards.City = function CardsCity(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
+Cards.City = function CardsCity(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.City, restProps, children);
 };
 
-Cards.Time = function CardsTime(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
+Cards.Time = function CardsTime(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Time, restProps, children);
 };
 
-Cards.LocationContainer = function CardsLocationContainer(_ref11) {
-  var children = _ref11.children,
-      restProps = _objectWithoutProperties(_ref11, ["children"]);
+Cards.LocationContainer = function CardsLocationContainer(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.LocationContainer, restProps, children);
 };
 
-Cards.Holder = function CardsHolder(_ref12) {
-  var children = _ref12.children,
-      restProps = _objectWithoutProperties(_ref12, ["children"]);
+Cards.Holder = function CardsHolder(_ref13) {
+  var children = _ref13.children,
+      restProps = _objectWithoutProperties(_ref13, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Holder, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/cards":"src/components/cards/styles/cards.js"}],"src/components/job_checkbox/styles/job_checkbox.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./styles/cards":"src/components/cards/styles/cards.js"}],"src/components/job_checkbox/styles/job_checkbox.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36620,7 +36645,503 @@ function Pageholder(_ref) {
 
   return /*#__PURE__*/_react.default.createElement(_pageholder.Container, restProps, children);
 }
-},{"react":"node_modules/react/index.js","./styles/pageholder":"src/components/pageholder/styles/pageholder.js"}],"src/components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/pageholder":"src/components/pageholder/styles/pageholder.js"}],"src/components/job_details/styles/job_details.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Description = exports.LocationName = exports.LocationIcon = exports.Location = exports.CompanyName = exports.CompanyContainer = exports.Logo = exports.Company = exports.Button = exports.Time = exports.ClockIcon = exports.TimeContainer = exports.Title = exports.TitleContainer = exports.JobTitle = exports.Instruction = exports.SubTitle = exports.LinkText = exports.Icon = exports.LinkContainer = exports.Article = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject22() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject22 = function _templateObject22() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject21() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject21 = function _templateObject21() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject20() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject20 = function _templateObject20() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject19() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject19 = function _templateObject19() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject18() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject18 = function _templateObject18() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject17() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject17 = function _templateObject17() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject16() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject16 = function _templateObject16() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject15() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject15 = function _templateObject15() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject14() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject14 = function _templateObject14() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject13() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.section(_templateObject());
+
+exports.Container = Container;
+
+var Article = _styledComponents.default.article(_templateObject2());
+
+exports.Article = Article;
+
+var LinkContainer = _styledComponents.default.div(_templateObject3());
+
+exports.LinkContainer = LinkContainer;
+
+var Icon = _styledComponents.default.img(_templateObject4());
+
+exports.Icon = Icon;
+
+var LinkText = _styledComponents.default.p(_templateObject5());
+
+exports.LinkText = LinkText;
+
+var SubTitle = _styledComponents.default.h3(_templateObject6());
+
+exports.SubTitle = SubTitle;
+
+var Instruction = _styledComponents.default.p(_templateObject7());
+
+exports.Instruction = Instruction;
+
+var JobTitle = _styledComponents.default.div(_templateObject8());
+
+exports.JobTitle = JobTitle;
+
+var TitleContainer = _styledComponents.default.div(_templateObject9());
+
+exports.TitleContainer = TitleContainer;
+
+var Title = _styledComponents.default.h2(_templateObject10());
+
+exports.Title = Title;
+
+var TimeContainer = _styledComponents.default.div(_templateObject11());
+
+exports.TimeContainer = TimeContainer;
+
+var ClockIcon = _styledComponents.default.img(_templateObject12());
+
+exports.ClockIcon = ClockIcon;
+
+var Time = _styledComponents.default.p(_templateObject13());
+
+exports.Time = Time;
+
+var Button = _styledComponents.default.button(_templateObject14());
+
+exports.Button = Button;
+
+var Company = _styledComponents.default.div(_templateObject15());
+
+exports.Company = Company;
+
+var Logo = _styledComponents.default.img(_templateObject16());
+
+exports.Logo = Logo;
+
+var CompanyContainer = _styledComponents.default.div(_templateObject17());
+
+exports.CompanyContainer = CompanyContainer;
+
+var CompanyName = _styledComponents.default.h3(_templateObject18());
+
+exports.CompanyName = CompanyName;
+
+var Location = _styledComponents.default.div(_templateObject19());
+
+exports.Location = Location;
+
+var LocationIcon = _styledComponents.default.img(_templateObject20());
+
+exports.LocationIcon = LocationIcon;
+
+var LocationName = _styledComponents.default.p(_templateObject21());
+
+exports.LocationName = LocationName;
+
+var Description = _styledComponents.default.p(_templateObject22());
+
+exports.Description = Description;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/job_details/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = JobDetails;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _job_details = require("./styles/job_details");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function JobDetails(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Container, restProps, children);
+}
+
+JobDetails.Article = function JobDetailsArticle(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Article, restProps, children);
+};
+
+JobDetails.LinkContainer = function JobDetailsLinkContainer(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.LinkContainer, restProps, children);
+};
+
+JobDetails.Icon = function JobDetailsIcon(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Icon, restProps, children);
+};
+
+JobDetails.LinkText = function JobDetailsLinkText(_ref5) {
+  var to = _ref5.to,
+      restProps = _objectWithoutProperties(_ref5, ["to"]);
+
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: to
+  }, /*#__PURE__*/_react.default.createElement(_job_details.LinkText, restProps));
+};
+
+JobDetails.SubTitle = function JobDetailsSubTitle(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.SubTitle, restProps, children);
+};
+
+JobDetails.Instruction = function JobDetailsInstruction(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Instruction, restProps, children);
+};
+
+JobDetails.JobTitle = function JobDetailsJobTitle(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.JobTitle, restProps, children);
+};
+
+JobDetails.TitleContainer = function JobDetailsTitleContainer(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.TitleContainer, restProps, children);
+};
+
+JobDetails.Title = function JobDetailsTitle(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Title, restProps, children);
+};
+
+JobDetails.TimeContainer = function JobDetailsTimeContainer(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.TimeContainer, restProps, children);
+};
+
+JobDetails.ClockIcon = function JobDetailsClockIcon(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.ClockIcon, restProps, children);
+};
+
+JobDetails.Time = function JobDetailsTime(_ref13) {
+  var children = _ref13.children,
+      restProps = _objectWithoutProperties(_ref13, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Time, restProps, children);
+};
+
+JobDetails.Button = function JobDetailsButton(_ref14) {
+  var children = _ref14.children,
+      restProps = _objectWithoutProperties(_ref14, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Button, restProps, children);
+};
+
+JobDetails.Company = function JobDetailsCompany(_ref15) {
+  var children = _ref15.children,
+      restProps = _objectWithoutProperties(_ref15, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Company, restProps, children);
+};
+
+JobDetails.Logo = function JobDetailsLogo(_ref16) {
+  var children = _ref16.children,
+      restProps = _objectWithoutProperties(_ref16, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Logo, restProps, children);
+};
+
+JobDetails.CompanyContainer = function JobDetailsCompanyContainer(_ref17) {
+  var children = _ref17.children,
+      restProps = _objectWithoutProperties(_ref17, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.CompanyContainer, restProps, children);
+};
+
+JobDetails.CompanyName = function JobDetailsCompanyName(_ref18) {
+  var children = _ref18.children,
+      restProps = _objectWithoutProperties(_ref18, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.CompanyName, restProps, children);
+};
+
+JobDetails.Location = function JobDetailsLocation(_ref19) {
+  var children = _ref19.children,
+      restProps = _objectWithoutProperties(_ref19, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Location, restProps, children);
+};
+
+JobDetails.LocationIcon = function JobDetailsLocationIcon(_ref20) {
+  var children = _ref20.children,
+      restProps = _objectWithoutProperties(_ref20, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.LocationIcon, restProps, children);
+};
+
+JobDetails.LocationName = function JobDetailsLocationName(_ref21) {
+  var children = _ref21.children,
+      restProps = _objectWithoutProperties(_ref21, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.LocationName, restProps, children);
+};
+
+JobDetails.Description = function JobDetailsDescription(_ref22) {
+  var children = _ref22.children,
+      restProps = _objectWithoutProperties(_ref22, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_job_details.Description, restProps, children);
+};
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./styles/job_details":"src/components/job_details/styles/job_details.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36668,6 +37189,12 @@ Object.defineProperty(exports, "Pageholder", {
     return _pageholder.default;
   }
 });
+Object.defineProperty(exports, "JobDetails", {
+  enumerable: true,
+  get: function () {
+    return _job_details.default;
+  }
+});
 
 var _header = _interopRequireDefault(require("./header"));
 
@@ -36683,8 +37210,10 @@ var _location_search_form = _interopRequireDefault(require("./location_search_fo
 
 var _pageholder = _interopRequireDefault(require("./pageholder"));
 
+var _job_details = _interopRequireDefault(require("./job_details"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"src/components/header/index.js","./search-form":"src/components/search-form/index.js","./cards":"src/components/cards/index.js","./job_checkbox":"src/components/job_checkbox/index.js","./location_checkboxes":"src/components/location_checkboxes/index.js","./location_search_form":"src/components/location_search_form/index.js","./pageholder":"src/components/pageholder/index.js"}],"src/containers/header.js":[function(require,module,exports) {
+},{"./header":"src/components/header/index.js","./search-form":"src/components/search-form/index.js","./cards":"src/components/cards/index.js","./job_checkbox":"src/components/job_checkbox/index.js","./location_checkboxes":"src/components/location_checkboxes/index.js","./location_search_form":"src/components/location_search_form/index.js","./pageholder":"src/components/pageholder/index.js","./job_details":"src/components/job_details/index.js"}],"src/containers/header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36884,9 +37413,10 @@ function CardsContainer(_ref) {
   return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, data && data.map(function (job) {
     var time = new Date().getTime() - new Date(job.created_at).getTime();
     var result = Math.floor(time / (1000 * 60 * 60 * 24));
-    return /*#__PURE__*/_react.default.createElement(_components.Cards.List, {
+    return /*#__PURE__*/_react.default.createElement(_components.Cards.LinkText, {
+      to: "".concat(job.id),
       key: job.id
-    }, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+    }, /*#__PURE__*/_react.default.createElement(_components.Cards.List, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
       src: job.company_logo,
       alt: "Company logo"
     }), /*#__PURE__*/_react.default.createElement(_components.Cards.Content, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Header, null, job.company), /*#__PURE__*/_react.default.createElement(_components.Cards.Title, null, job.title), /*#__PURE__*/_react.default.createElement(_components.Cards.Button, {
@@ -36897,7 +37427,7 @@ function CardsContainer(_ref) {
     }), /*#__PURE__*/_react.default.createElement(_components.Cards.City, null, job.location)), /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
       src: "./images/access_time-24px.svg",
       alt: "Access time"
-    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours")))));
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours"))))));
   }));
 }
 },{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/containers/pageholder.js":[function(require,module,exports) {
@@ -36943,7 +37473,80 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Home() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null), /*#__PURE__*/_react.default.createElement(_pageholder.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js","../containers/pageholder":"src/containers/pageholder.js"}],"src/app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js","../containers/pageholder":"src/containers/pageholder.js"}],"src/containers/job_detail.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = JobDetailsContainer;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _context = require("../context/context");
+
+var _components = require("../components");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function JobDetailsContainer(_ref) {
+  var children = _ref.children;
+
+  var _useParams = (0, _reactRouterDom.useParams)(),
+      id = _useParams.id;
+
+  var _useContext = (0, _react.useContext)(_context.Context),
+      state = _useContext.state;
+
+  var data = state.data;
+  var findId = data.find(function (data) {
+    return data.id === id;
+  });
+  console.log(findId);
+  var time = new Date().getTime() - new Date(findId.created_at).getTime();
+  var result = Math.floor(time / (1000 * 60 * 60 * 24));
+  return /*#__PURE__*/_react.default.createElement(_components.JobDetails, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Article, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Icon, {
+    src: "./images/keyboard_backspace-24px.svg",
+    alt: "Go back"
+  }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkText, {
+    to: "/"
+  }, "Back to search")), /*#__PURE__*/_react.default.createElement(_components.JobDetails.SubTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Instruction, null, "Please email a copy of your resume and online portfilio to ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "mailto"
+  }, "wes@kasisto.com"), " & CC ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "mailto"
+  }, "eric@kasisto.com"))), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Article, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.JobTitle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.TitleContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Title, null, findId.title), /*#__PURE__*/_react.default.createElement(_components.JobDetails.TimeContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.ClockIcon, {
+    src: "./images/access_time-24px.svg",
+    alt: "Clock icon"
+  }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Time, null, " ", result, " hours ago.")), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Button, null, findId.type))), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Company, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Logo, {
+    src: findId.company_logo,
+    alt: "company logo"
+  }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.CompanyContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.CompanyName, null, findId.company), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Location, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.LocationIcon, {
+    src: "./images/public-24px.svg",
+    alt: "Location icon"
+  }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.LocationName, null, findId.location)))), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Description, null, findId.description.replace(/<[^>]+>/g, ''))));
+}
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/pages/job_detail.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Details;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _job_detail = _interopRequireDefault(require("../containers/job_detail"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Details() {
+  return /*#__PURE__*/_react.default.createElement(_job_detail.default, null);
+}
+},{"react":"node_modules/react/index.js","../containers/job_detail":"src/containers/job_detail.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36956,6 +37559,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _reactRouterDom = require("react-router-dom");
 
 var _home = _interopRequireDefault(require("./pages/home"));
+
+var _job_detail = _interopRequireDefault(require("./pages/job_detail"));
 
 var _context = require("./context/context");
 
@@ -36974,10 +37579,13 @@ function App() {
   console.log(data);
   console.log(loading);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), !loading && data && /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_home.default, null)))));
+    exact: true,
+    path: "/"
+  }, /*#__PURE__*/_react.default.createElement(_home.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/:id"
+  }, /*#__PURE__*/_react.default.createElement(_job_detail.default, null)))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js","./context/context":"src/context/context.js"}],"src/global-styles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js","./pages/job_detail":"src/pages/job_detail.js","./context/context":"src/context/context.js"}],"src/global-styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37045,7 +37653,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61269" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57386" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

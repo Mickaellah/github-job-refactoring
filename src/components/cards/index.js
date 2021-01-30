@@ -1,6 +1,9 @@
 import React from 'react';
+import {Link as ReachRouterLink} from 'react-router-dom';
+
 import { 
     Header, 
+    LinkText,
     Logo, 
     Title, 
     Button, 
@@ -19,6 +22,14 @@ export default function Cards({children, ...restProps}) {
 
 Cards.Header = function CardsHeader({children, ...restProps}) {
     return <Header {...restProps}>{children}</Header>
+}
+
+Cards.LinkText = function CardsLinkText({to, ...restProps}) {
+    return (
+        <ReachRouterLink to={to}>
+            <LinkText {...restProps} />
+        </ReachRouterLink>
+    )
 }
 
 Cards.Group = function CardsGroup({children, ...restProps}) {

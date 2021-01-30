@@ -4,6 +4,9 @@ export const Container = styled.div`
 
 `;
 
+export const LinkText = styled.p`
+`;
+
 export const List = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
