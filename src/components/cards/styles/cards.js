@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    @media (min-width: 600px) {
+        margin-inline-start: 32px;
+    }
+`;
 
 export const List = styled.div`
     display: grid;
@@ -11,6 +15,7 @@ export const List = styled.div`
     margin-block-start: 32px;
     background-color: #ffffff;
     border-radius: 4px;
+    margin-inline-start: 32px;
 `;
 
 export const Header = styled.h3``;
@@ -53,7 +58,7 @@ export const Holder = styled.div`
     justify-content: space-between;
     margin-block-start: 16px;
 
-    @media (min-width: 700px) {
+    @media (min-width: 1000px) {
         margin-inline-start: 50%;
     }
 `;

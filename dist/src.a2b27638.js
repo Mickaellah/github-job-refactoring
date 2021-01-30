@@ -36002,7 +36002,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 16px;\n\n    @media (min-width: 700px) {\n        margin-inline-start: 50%;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 16px;\n\n    @media (min-width: 1000px) {\n        margin-inline-start: 50%;\n    }\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -36102,7 +36102,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n    margin-inline-start: 32px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36112,7 +36112,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 600px) {\n        margin-inline-start: 32px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36569,7 +36569,58 @@ LocationSearchForm.Label = function LocationSearchFormLabel(_ref3) {
 
   return /*#__PURE__*/_react.default.createElement(_locatio_search_form.Label, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/locatio_search_form":"src/components/location_search_form/styles/locatio_search_form.js"}],"src/components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/locatio_search_form":"src/components/location_search_form/styles/locatio_search_form.js"}],"src/components/pageholder/styles/pageholder.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 700px) {\n        display: flex;\n        margin-block-start: 26px;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.section(_templateObject());
+
+exports.Container = Container;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/pageholder/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Pageholder;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _pageholder = require("./styles/pageholder");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Pageholder(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_pageholder.Container, restProps, children);
+}
+},{"react":"node_modules/react/index.js","./styles/pageholder":"src/components/pageholder/styles/pageholder.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36611,6 +36662,12 @@ Object.defineProperty(exports, "LocationSearchForm", {
     return _location_search_form.default;
   }
 });
+Object.defineProperty(exports, "Pageholder", {
+  enumerable: true,
+  get: function () {
+    return _pageholder.default;
+  }
+});
 
 var _header = _interopRequireDefault(require("./header"));
 
@@ -36624,8 +36681,10 @@ var _location_checkboxes = _interopRequireDefault(require("./location_checkboxes
 
 var _location_search_form = _interopRequireDefault(require("./location_search_form"));
 
+var _pageholder = _interopRequireDefault(require("./pageholder"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"src/components/header/index.js","./search-form":"src/components/search-form/index.js","./cards":"src/components/cards/index.js","./job_checkbox":"src/components/job_checkbox/index.js","./location_checkboxes":"src/components/location_checkboxes/index.js","./location_search_form":"src/components/location_search_form/index.js"}],"src/containers/header.js":[function(require,module,exports) {
+},{"./header":"src/components/header/index.js","./search-form":"src/components/search-form/index.js","./cards":"src/components/cards/index.js","./job_checkbox":"src/components/job_checkbox/index.js","./location_checkboxes":"src/components/location_checkboxes/index.js","./location_search_form":"src/components/location_search_form/index.js","./pageholder":"src/components/pageholder/index.js"}],"src/containers/header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36665,6 +36724,37 @@ function SearchFormContainer(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_components.SearchForm.Button, {
     type: "submit"
   }, "Search"), children);
+}
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/containers/checkboxes.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = CheckboxesContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CheckboxesContainer(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
+    type: "checkbox"
+  }), /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Label, null, "Full time")), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm, null, /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Input, {
+    type: "text",
+    placeholder: "City, state, zip code or country"
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Label, null, "Location")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
+    type: "checkbox"
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "London")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
+    type: "checkbox"
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "Amsterdam")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
+    type: "checkbox"
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "New York")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
+    type: "checkbox"
+  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "Berlin"))));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/context/context.js":[function(require,module,exports) {
 "use strict";
@@ -36810,38 +36900,29 @@ function CardsContainer(_ref) {
     }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours")))));
   }));
 }
-},{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/containers/checkboxes.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/containers/pageholder.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = CheckboxesContainer;
+exports.default = PageholderContainer;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _components = require("../components");
 
+var _checkboxes = _interopRequireDefault(require("./checkboxes"));
+
+var _card = _interopRequireDefault(require("./card"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function CheckboxesContainer(_ref) {
+function PageholderContainer(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox, null, /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Input, {
-    type: "checkbox"
-  }), /*#__PURE__*/_react.default.createElement(_components.JobCheckbox.Label, null, "Full time")), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm, null, /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Input, {
-    type: "text",
-    placeholder: "City, state, zip code or country"
-  }), /*#__PURE__*/_react.default.createElement(_components.LocationSearchForm.Label, null, "Location")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
-  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "London")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
-  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "Amsterdam")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
-  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "New York")), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Input, {
-    type: "checkbox"
-  }), /*#__PURE__*/_react.default.createElement(_components.LocationCheckboxes.Label, null, "Berlin"))));
+  return /*#__PURE__*/_react.default.createElement(_components.Pageholder, null, /*#__PURE__*/_react.default.createElement(_checkboxes.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
 }
-},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","./checkboxes":"src/containers/checkboxes.js","./card":"src/containers/card.js"}],"src/pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36855,16 +36936,16 @@ var _header = _interopRequireDefault(require("../containers/header"));
 
 var _search_form = _interopRequireDefault(require("../containers/search_form"));
 
-var _card = _interopRequireDefault(require("../containers/card"));
-
-var _checkboxes = _interopRequireDefault(require("../containers/checkboxes"));
+var _pageholder = _interopRequireDefault(require("../containers/pageholder"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import CardsContainer from '../containers/card';
+// import CheckboxesContainer from '../containers/checkboxes';
 function Home() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null), /*#__PURE__*/_react.default.createElement(_checkboxes.default, null), /*#__PURE__*/_react.default.createElement(_card.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_search_form.default, null), /*#__PURE__*/_react.default.createElement(_pageholder.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js","../containers/card":"src/containers/card.js","../containers/checkboxes":"src/containers/checkboxes.js"}],"src/app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","../containers/search_form":"src/containers/search_form.js","../containers/pageholder":"src/containers/pageholder.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36966,7 +37047,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61269" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
