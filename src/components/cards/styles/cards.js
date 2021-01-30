@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-
+    
 `;
 
 export const LinkText = styled.p`
@@ -17,7 +17,11 @@ export const List = styled.div`
     margin-block-start: 32px;
     background-color: #ffffff;
     border-radius: 4px;
-    margin-inline-start: 32px;
+    color: #334680;
+
+    @media (min-width: 700px) {
+        margin-inline-start: 32px;
+    }
 `;
 
 export const Header = styled.h3``;
@@ -35,6 +39,7 @@ export const Button = styled.button`
     border-radius: 5px;
     padding: 8px;
     background-color: white;
+    color: #334680;
 `;
 
 export const Logo = styled.img`
@@ -59,6 +64,8 @@ export const Holder = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-block-start: 16px;
+    color: #B7BCCE;
+;
 
     @media (min-width: 1000px) {
         margin-inline-start: 50%;

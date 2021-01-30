@@ -36002,7 +36002,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 16px;\n\n    @media (min-width: 1000px) {\n        margin-inline-start: 50%;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 16px;\n    color: #B7BCCE;\n;\n\n    @media (min-width: 1000px) {\n        margin-inline-start: 50%;\n    }\n"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -36052,7 +36052,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    border: 1px solid #334680;\n    border-radius: 5px;\n    padding: 8px;\n    background-color: white;\n"]);
+  var data = _taggedTemplateLiteral(["\n    border: 1px solid #334680;\n    border-radius: 5px;\n    padding: 8px;\n    background-color: white;\n    color: #334680;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -36102,7 +36102,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n    margin-inline-start: 32px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n    color: #334680;\n\n    @media (min-width: 700px) {\n        margin-inline-start: 32px;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36122,7 +36122,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    \n"]);
 
   _templateObject = function _templateObject() {
     return data;
