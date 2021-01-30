@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
 
 `;
 
 export const LinkText = styled.p`
+    
 `;
 
 export const List = styled.div`
@@ -21,7 +22,7 @@ export const List = styled.div`
 
 export const Header = styled.h3``;
 
-export const Group = styled.div``;
+export const Group = styled.article``;
 
 export const Content = styled.div`
     grid-column: 2 / 4;

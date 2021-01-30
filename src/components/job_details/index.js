@@ -4,7 +4,8 @@ import {Link as ReachRouterLink} from 'react-router-dom';
 
 import {
     Container, 
-    Article, 
+    FirstArticle, 
+    SecondArticle,
     LinkContainer,
     Icon,
     LinkText,
@@ -13,6 +14,7 @@ import {
     JobTitle,
     TitleContainer,
     Title,
+    ButtonContainer,
     TimeContainer,
     ClockIcon,
     Time,
@@ -31,8 +33,12 @@ export default function JobDetails({children, ...restProps}) {
     return <Container {...restProps}>{children}</Container>
 }
 
-JobDetails.Article = function JobDetailsArticle({children, ...restProps}) {
-    return <Article {...restProps}>{children}</Article>
+JobDetails.FirstArticle = function JobDetailsFirstArticle({children, ...restProps}) {
+    return <FirstArticle {...restProps}>{children}</FirstArticle>
+}
+
+JobDetails.SecondArticle = function JobDetailsSecondArticle({children, ...restProps}) {
+    return <SecondArticle {...restProps}>{children}</SecondArticle>
 }
 
 JobDetails.LinkContainer = function JobDetailsLinkContainer({children, ...restProps}) {
@@ -69,6 +75,10 @@ JobDetails.TitleContainer = function JobDetailsTitleContainer({children, ...rest
 
 JobDetails.Title = function JobDetailsTitle({children, ...restProps}) {
     return <Title {...restProps}>{children}</Title>
+}
+
+JobDetails.ButtonContainer = function JobDetailsButtonContainer({children, ...restProps}) {
+    return <ButtonContainer {...restProps}>{children}</ButtonContainer>
 }
 
 JobDetails.TimeContainer = function JobDetailsTimeContainer({children, ...restProps}) {

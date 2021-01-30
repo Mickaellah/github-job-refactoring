@@ -19,7 +19,7 @@ export default function JobDetailsContainer({children}) {
 
     return (
         <JobDetails>
-            <JobDetails.Article>
+            <JobDetails.FirstArticle>
                 <JobDetails.LinkContainer>
                     <JobDetails.Icon src="./images/keyboard_backspace-24px.svg" alt="Go back" />
                     <JobDetails.LinkText to="/">Back to search</JobDetails.LinkText>
@@ -30,18 +30,21 @@ export default function JobDetailsContainer({children}) {
                 <JobDetails.Instruction>
                     Please email a copy of your resume and online portfilio to <a href="mailto">wes@kasisto.com</a> & CC <a href="mailto">eric@kasisto.com</a>
                 </JobDetails.Instruction>
-            </JobDetails.Article>
-            <JobDetails.Article>
+            </JobDetails.FirstArticle>
+            <JobDetails.SecondArticle>
                 <JobDetails.JobTitle>
                     <JobDetails.TitleContainer>
                         <JobDetails.Title>
                             {findId.title}
                         </JobDetails.Title>
-                        <JobDetails.TimeContainer>
-                            <JobDetails.ClockIcon src="./images/access_time-24px.svg" alt="Clock icon" />
-                            <JobDetails.Time> {result} hours ago.</JobDetails.Time>
-                        </JobDetails.TimeContainer>
-                        <JobDetails.Button>{findId.type}</JobDetails.Button>
+                        <JobDetails.ButtonContainer>
+                            <JobDetails.TimeContainer>
+                                <JobDetails.ClockIcon src="./images/access_time-24px.svg" alt="Clock icon" />
+                                <JobDetails.Time> {result} hours ago.</JobDetails.Time>
+                            </JobDetails.TimeContainer>
+                            
+                            <JobDetails.Button>{findId.type}</JobDetails.Button>
+                        </JobDetails.ButtonContainer>
                     </JobDetails.TitleContainer>
                 </JobDetails.JobTitle>
                 <JobDetails.Company>
@@ -61,7 +64,7 @@ export default function JobDetailsContainer({children}) {
                 <JobDetails.Description>
                     {findId.description.replace(/<[^>]+>/g, '')}
                 </JobDetails.Description>
-            </JobDetails.Article>
+            </JobDetails.SecondArticle>
         </JobDetails>
     )
 }
