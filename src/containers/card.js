@@ -19,9 +19,11 @@ export default function CardsContainer({children}) {
                         <Cards.List>
                             <Cards.Logo src={job.company_logo} alt="Company logo" />
                             <Cards.Content>
-                                <Cards.Header>{job.company}</Cards.Header>
-                                <Cards.Title>{job.title}</Cards.Title>
-                                <Cards.Button type="button">{job.type}</Cards.Button>
+                                <Cards.TitleContainer>
+                                    <Cards.Header>{job.company}</Cards.Header>
+                                    <Cards.Title>{job.title}</Cards.Title>
+                                    <Cards.Button type="button">{job.type}</Cards.Button>
+                                </Cards.TitleContainer>
                                 <Cards.Holder>
                                     <Cards.LocationContainer>
                                         <Cards.Logo className="location" src="./images/public-24px.svg" alt="location" />

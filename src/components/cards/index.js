@@ -4,7 +4,8 @@ import {Link as ReachRouterLink} from 'react-router-dom';
 import { 
     Header, 
     LinkText,
-    Logo, 
+    Logo,
+    TitleContainer, 
     Title, 
     Button, 
     City, 
@@ -46,6 +47,10 @@ Cards.Content = function CardsContent({children, ...restProps}) {
 
 Cards.Logo = function CardsLogo({...restProps}) {
     return <Logo {...restProps} />
+}
+
+Cards.TitleContainer = function CardsTitleContainer({children, ...restProps}) {
+    return <TitleContainer {...restProps}>{children}</TitleContainer>
 }
 
 Cards.Title = function CardsTitle({children, ...restProps}) {

@@ -35995,14 +35995,24 @@ SearchForm.Button = function SearchFormButton(_ref3) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Holder = exports.LocationContainer = exports.City = exports.Time = exports.Logo = exports.Button = exports.Title = exports.Content = exports.Group = exports.Header = exports.List = exports.LinkText = exports.Container = void 0;
+exports.Holder = exports.LocationContainer = exports.City = exports.Time = exports.Logo = exports.Button = exports.Title = exports.TitleContainer = exports.Content = exports.Group = exports.Header = exports.List = exports.LinkText = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject14() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 20%;\n    color: #B7BCCE;\n    grid-column: 2 / 3;\n"]);
+
+  _templateObject14 = function _templateObject14() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin-block-start: 16px;\n    color: #B7BCCE;\n;\n\n    @media (min-width: 1000px) {\n        margin-inline-start: 50%;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -36012,7 +36022,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    font-size: 12px;\n\n    @media (min-width: 1000px) {\n        margin-block-start: 40%;\n    }\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -36022,7 +36032,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    font-size: 12px;\n    margin-block-start: 16px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    font-size: 12px;\n\n    @media (min-width: 1000px) {\n        margin-block-start: 65%;\n    }\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -36032,7 +36042,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    margin-inline-start: 16px;\n    font-size: 12px;\n    margin-block-start: 16px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n    width: 50%;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -36042,7 +36052,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n    width: 50%;\n"]);
+  var data = _taggedTemplateLiteral(["\n    border: 1px solid #334680;\n    border-radius: 5px;\n    padding: 8px;\n    background-color: white;\n    color: #334680;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -36052,7 +36062,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    border: 1px solid #334680;\n    border-radius: 5px;\n    padding: 8px;\n    background-color: white;\n    color: #334680;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 18px;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -36062,7 +36072,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 18px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -36072,7 +36082,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    grid-column: 2 / 5;\n"]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 2 / 5;\n\n    @media (min-width: 1000px) {\n        display: grid;\n        grid-template-columns: repeat(2, 1fr);\n        grid-column-gap: 20px;\n        column-gap: 20px;\n    }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36157,31 +36167,35 @@ var Content = _styledComponents.default.div(_templateObject6());
 
 exports.Content = Content;
 
-var Title = _styledComponents.default.h2(_templateObject7());
+var TitleContainer = _styledComponents.default.div(_templateObject7());
+
+exports.TitleContainer = TitleContainer;
+
+var Title = _styledComponents.default.h2(_templateObject8());
 
 exports.Title = Title;
 
-var Button = _styledComponents.default.button(_templateObject8());
+var Button = _styledComponents.default.button(_templateObject9());
 
 exports.Button = Button;
 
-var Logo = _styledComponents.default.img(_templateObject9());
+var Logo = _styledComponents.default.img(_templateObject10());
 
 exports.Logo = Logo;
 
-var Time = _styledComponents.default.p(_templateObject10());
+var Time = _styledComponents.default.p(_templateObject11());
 
 exports.Time = Time;
 
-var City = _styledComponents.default.p(_templateObject11());
+var City = _styledComponents.default.p(_templateObject12());
 
 exports.City = City;
 
-var LocationContainer = _styledComponents.default.div(_templateObject12());
+var LocationContainer = _styledComponents.default.div(_templateObject13());
 
 exports.LocationContainer = LocationContainer;
 
-var Holder = _styledComponents.default.div(_templateObject13());
+var Holder = _styledComponents.default.div(_templateObject14());
 
 exports.Holder = Holder;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/cards/index.js":[function(require,module,exports) {
@@ -36253,44 +36267,51 @@ Cards.Logo = function CardsLogo(_ref7) {
   return /*#__PURE__*/_react.default.createElement(_cards.Logo, restProps);
 };
 
-Cards.Title = function CardsTitle(_ref8) {
+Cards.TitleContainer = function CardsTitleContainer(_ref8) {
   var children = _ref8.children,
       restProps = _objectWithoutProperties(_ref8, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_cards.TitleContainer, restProps, children);
+};
+
+Cards.Title = function CardsTitle(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Title, restProps, children);
 };
 
-Cards.Button = function CardsButton(_ref9) {
-  var children = _ref9.children,
-      restProps = _objectWithoutProperties(_ref9, ["children"]);
+Cards.Button = function CardsButton(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Button, restProps, children);
 };
 
-Cards.City = function CardsCity(_ref10) {
-  var children = _ref10.children,
-      restProps = _objectWithoutProperties(_ref10, ["children"]);
+Cards.City = function CardsCity(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.City, restProps, children);
 };
 
-Cards.Time = function CardsTime(_ref11) {
-  var children = _ref11.children,
-      restProps = _objectWithoutProperties(_ref11, ["children"]);
+Cards.Time = function CardsTime(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Time, restProps, children);
 };
 
-Cards.LocationContainer = function CardsLocationContainer(_ref12) {
-  var children = _ref12.children,
-      restProps = _objectWithoutProperties(_ref12, ["children"]);
+Cards.LocationContainer = function CardsLocationContainer(_ref13) {
+  var children = _ref13.children,
+      restProps = _objectWithoutProperties(_ref13, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.LocationContainer, restProps, children);
 };
 
-Cards.Holder = function CardsHolder(_ref13) {
-  var children = _ref13.children,
-      restProps = _objectWithoutProperties(_ref13, ["children"]);
+Cards.Holder = function CardsHolder(_ref14) {
+  var children = _ref14.children,
+      restProps = _objectWithoutProperties(_ref14, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_cards.Holder, restProps, children);
 };
@@ -37675,9 +37696,9 @@ function CardsContainer(_ref) {
     }, /*#__PURE__*/_react.default.createElement(_components.Cards.List, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
       src: job.company_logo,
       alt: "Company logo"
-    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Content, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Header, null, job.company), /*#__PURE__*/_react.default.createElement(_components.Cards.Title, null, job.title), /*#__PURE__*/_react.default.createElement(_components.Cards.Button, {
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Content, null, /*#__PURE__*/_react.default.createElement(_components.Cards.TitleContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Header, null, job.company), /*#__PURE__*/_react.default.createElement(_components.Cards.Title, null, job.title), /*#__PURE__*/_react.default.createElement(_components.Cards.Button, {
       type: "button"
-    }, job.type), /*#__PURE__*/_react.default.createElement(_components.Cards.Holder, null, /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+    }, job.type)), /*#__PURE__*/_react.default.createElement(_components.Cards.Holder, null, /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
       className: "location",
       src: "./images/public-24px.svg",
       alt: "location"
@@ -37772,9 +37793,11 @@ function JobDetailsContainer(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkText, {
     to: "/"
   }, "Back to search")), /*#__PURE__*/_react.default.createElement(_components.JobDetails.SubTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Instruction, null, "Please email a copy of your resume and online portfilio to ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "mailto"
+    href: "mailto",
+    className: "email_address"
   }, "wes@kasisto.com"), " & CC ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "mailto"
+    href: "mailto",
+    className: "email_address"
   }, "eric@kasisto.com"))), /*#__PURE__*/_react.default.createElement(_components.JobDetails.SecondArticle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.JobTitle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.TitleContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Title, null, findId.title), /*#__PURE__*/_react.default.createElement(_components.JobDetails.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.TimeContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.ClockIcon, {
     src: "./images/access_time-24px.svg",
     alt: "Clock icon"
@@ -37851,7 +37874,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

@@ -34,4 +34,15 @@ export const GlobalStyles = createGlobalStyle`
     .time {
         width: 24px;
     }
+
+    @media (min-width: 1000px) {
+        .location,
+        .time {
+            margin-block-start: 40px;
+        }
+    }
+
+    .email_address {
+        color: #1E86FF;
+    }
 `;

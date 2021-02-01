@@ -32,6 +32,17 @@ export const Group = styled.article``;
 
 export const Content = styled.div`
     grid-column: 2 / 5;
+
+    @media (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        column-gap: 20px;
+    }
+`;
+
+export const TitleContainer = styled.div`
+    grid-column: 1 / 2;
 `;
 
 export const Title = styled.h2`
@@ -55,13 +66,19 @@ export const Logo = styled.img`
 export const Time = styled.p`
     margin-inline-start: 16px;
     font-size: 12px;
-    margin-block-start: 16px;
+
+    @media (min-width: 1000px) {
+        margin-block-start: 65%;
+    }
 `;
 
 export const City = styled.p`
     margin-inline-start: 16px;
     font-size: 12px;
-    margin-block-start: 16px;
+
+    @media (min-width: 1000px) {
+        margin-block-start: 40%;
+    }
 `;
 
 export const LocationContainer = styled.div`
@@ -72,11 +89,7 @@ export const Holder = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-block-start: 16px;
+    margin-block-start: 20%;
     color: #B7BCCE;
-;
-
-    @media (min-width: 1000px) {
-        margin-inline-start: 50%;
-    }
+    grid-column: 2 / 3;
 `;
