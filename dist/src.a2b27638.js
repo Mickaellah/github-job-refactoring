@@ -37429,6 +37429,11 @@ function SearchFormContainer(_ref) {
       jobTitle = _useState2[0],
       setJobTitle = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      company = _useState4[0],
+      setCompany = _useState4[1];
+
   var _useContext = (0, _react.useContext)(_context.Context),
       state = _useContext.state,
       dispatch = _useContext.dispatch;
@@ -37441,10 +37446,23 @@ function SearchFormContainer(_ref) {
       if (!jobTitle) return undefined;
       return job.title.toLowerCase().includes(jobTitle.toLowerCase());
     });
+    var companies = data.filter(function (job) {
+      if (!company) return undefined;
+      return job.company.toLowerCase().includes(company.toLowerCase());
+    });
     dispatch({
       type: "JOBS",
       job: jobs
     });
+    dispatch({
+      type: "JOBS",
+      job: companies
+    });
+  }
+
+  function handleChange(e) {
+    setJobTitle(e.target.value);
+    setCompany(e.target.value);
   }
 
   return /*#__PURE__*/_react.default.createElement(_components.SearchForm, {
@@ -37452,9 +37470,7 @@ function SearchFormContainer(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_components.SearchForm.Input, {
     type: "search",
     value: jobTitle,
-    onChange: function onChange(e) {
-      return setJobTitle(e.target.value);
-    },
+    onChange: handleChange,
     placeholder: "Title, companies, expertise"
   }), /*#__PURE__*/_react.default.createElement(_components.SearchForm.Button, {
     type: "submit"

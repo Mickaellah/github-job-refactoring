@@ -5,6 +5,7 @@ import {SearchForm} from '../components';
 
 export default function SearchFormContainer({children}) {
     const [jobTitle, setJobTitle] = useState('');
+    const [company, setCompany] = useState('');
     const {state, dispatch} = useContext(Context);
     const {data} = state;
 
@@ -16,12 +17,23 @@ export default function SearchFormContainer({children}) {
             return job.title.toLowerCase().includes(jobTitle.toLowerCase());
         });
 
+        const companies = data.filter(job => { 
+            if (!company) return undefined;
+            return job.company.toLowerCase().includes(company.toLowerCase());
+        });
+
         dispatch({type: "JOBS", job: jobs});
+        dispatch({type: "JOBS", job: companies});
+    }
+
+    function handleChange(e) {
+        setJobTitle(e.target.value);
+        setCompany(e.target.value);
     }
 
     return (
         <SearchForm onSubmit={handleSubmit}>
-            <SearchForm.Input type="search" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)} placeholder="Title, companies, expertise" />
+            <SearchForm.Input type="search" value={jobTitle} onChange={handleChange} placeholder="Title, companies, expertise" />
             <SearchForm.Button type="submit">Search</SearchForm.Button>
             {children}
         </SearchForm>
