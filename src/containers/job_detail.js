@@ -25,7 +25,7 @@ export default function JobDetailsContainer({children}) {
                     How to apply
                 </JobDetails.SubTitle>
                 <JobDetails.Instruction>
-                    Please email a copy of your resume and online portfilio to <a href="mailto" className="email_address">wes@kasisto.com</a> & CC <a href="mailto" className="email_address">eric@kasisto.com</a>
+                    Please email a copy of your resume and online portfilio to <a href="mailto:wes@kasisto.com" className="email_address">wes@kasisto.com</a> & CC <a href="mailto:eric@kasisto.com" className="email_address">eric@kasisto.com</a>
                 </JobDetails.Instruction>
             </JobDetails.FirstArticle> 
             <JobDetails.SecondArticle>

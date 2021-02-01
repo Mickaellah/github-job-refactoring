@@ -37793,10 +37793,10 @@ function JobDetailsContainer(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkText, {
     to: "/"
   }, "Back to search")), /*#__PURE__*/_react.default.createElement(_components.JobDetails.SubTitle, null, "How to apply"), /*#__PURE__*/_react.default.createElement(_components.JobDetails.Instruction, null, "Please email a copy of your resume and online portfilio to ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "mailto",
+    href: "mailto:wes@kasisto.com",
     className: "email_address"
   }, "wes@kasisto.com"), " & CC ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "mailto",
+    href: "mailto:eric@kasisto.com",
     className: "email_address"
   }, "eric@kasisto.com"))), /*#__PURE__*/_react.default.createElement(_components.JobDetails.SecondArticle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.JobTitle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.TitleContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Title, null, findId.title), /*#__PURE__*/_react.default.createElement(_components.JobDetails.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.TimeContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.ClockIcon, {
     src: "./images/access_time-24px.svg",
