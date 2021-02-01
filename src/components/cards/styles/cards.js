@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.article`
+export const Container = styled.div`
     
 `;
 
-export const LinkText = styled.p`
+export const LinkText = styled.article`
     
 `;
 

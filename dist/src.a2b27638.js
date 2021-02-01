@@ -36133,11 +36133,11 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.article(_templateObject());
+var Container = _styledComponents.default.div(_templateObject());
 
 exports.Container = Container;
 
-var LinkText = _styledComponents.default.p(_templateObject2());
+var LinkText = _styledComponents.default.article(_templateObject2());
 
 exports.LinkText = LinkText;
 
@@ -37764,7 +37764,6 @@ function JobDetailsContainer(_ref) {
   var findId = data.find(function (data) {
     return data.id === id;
   });
-  console.log(findId);
   var time = new Date().getTime() - new Date(findId.created_at).getTime();
   var result = Math.floor(time / (1000 * 60 * 60 * 24));
   return /*#__PURE__*/_react.default.createElement(_components.JobDetails, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Header, null, /*#__PURE__*/_react.default.createElement("b", null, "Github"), " jobs"), /*#__PURE__*/_react.default.createElement(_components.JobDetails.FirstArticle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Icon, {

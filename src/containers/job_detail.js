@@ -9,7 +9,6 @@ export default function JobDetailsContainer({children}) {
     const {data} = state;
 
     const findId = data.find(data => data.id === id);
-    console.log(findId);
 
     let time = new Date().getTime() - new Date(findId.created_at).getTime();
     let result = Math.floor(time / (1000 * 60 * 60 * 24));
