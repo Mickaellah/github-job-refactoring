@@ -11,7 +11,6 @@ export default function CheckboxesContainer({children}) {
     function handleChange(e) {
         setIsChecked(e.target.isChecked);
         const filterArray = data.filter(data => data.type === "Full Time");
-        console.log(filterArray);
         dispatch({type: "JOBS", job: filterArray});
     }
 

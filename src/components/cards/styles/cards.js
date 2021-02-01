@@ -26,6 +26,7 @@ export const List = styled.div`
 
 export const Header = styled.h3`
     font-size: 12px;
+    margin: 0;
 `;
 
 export const Group = styled.article``;
@@ -60,7 +61,6 @@ export const Button = styled.button`
 export const Logo = styled.img`
     grid-column: 1 / 2;
     border-radius: 4px;
-    width: 50%;
 `;
 
 export const Time = styled.p`

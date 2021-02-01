@@ -36042,7 +36042,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n    width: 50%;\n"]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -36102,7 +36102,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 12px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 12px;\n    margin: 0;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -37430,8 +37430,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -37473,10 +37471,10 @@ function SearchFormContainer(_ref) {
       if (!company) return undefined;
       return job.company.toLowerCase().includes(company.toLowerCase());
     });
-    dispatch(_defineProperty({
+    dispatch({
       type: "JOBS",
       job: jobs
-    }, "job", companies)); // dispatch({type: "JOBS", job: companies});
+    }); // dispatch({type: "JOBS", job: companies});
   }
 
   function handleChange(e) {
@@ -37549,7 +37547,6 @@ function CheckboxesContainer(_ref) {
     var filterArray = data.filter(function (data) {
       return data.type === "Full Time";
     });
-    console.log(filterArray);
     dispatch({
       type: "JOBS",
       job: filterArray
