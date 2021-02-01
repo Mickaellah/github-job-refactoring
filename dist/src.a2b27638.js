@@ -36042,7 +36042,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 1 / 2;\n    border-radius: 4px;\n    width: 50%;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -36072,7 +36072,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    grid-column: 2 / 4;\n"]);
+  var data = _taggedTemplateLiteral(["\n    grid-column: 2 / 5;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36102,7 +36102,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n    color: #334680;\n\n    @media (min-width: 700px) {\n        margin-inline-start: 32px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-column-gap: 16px;\n    column-gap: 16px;\n    padding: 16px;\n    margin-block-start: 32px;\n    background-color: #ffffff;\n    border-radius: 4px;\n    color: #334680;\n\n    @media (min-width: 700px) {\n        margin-inline-start: 32px;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -37662,9 +37662,11 @@ function CardsContainer(_ref) {
     }), /*#__PURE__*/_react.default.createElement(_components.Cards.Content, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Header, null, job.company), /*#__PURE__*/_react.default.createElement(_components.Cards.Title, null, job.title), /*#__PURE__*/_react.default.createElement(_components.Cards.Button, {
       type: "button"
     }, job.type), /*#__PURE__*/_react.default.createElement(_components.Cards.Holder, null, /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+      className: "location",
       src: "./images/public-24px.svg",
       alt: "location"
     }), /*#__PURE__*/_react.default.createElement(_components.Cards.City, null, job.location)), /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+      className: "time",
       src: "./images/access_time-24px.svg",
       alt: "Access time"
     }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours"))))));
@@ -37834,7 +37836,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37891,7 +37893,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65486" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57511" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

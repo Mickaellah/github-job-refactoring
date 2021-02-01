@@ -10,7 +10,7 @@ export const LinkText = styled.p`
 
 export const List = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 16px;
     column-gap: 16px;
     padding: 16px;
@@ -31,7 +31,7 @@ export const Header = styled.h3`
 export const Group = styled.article``;
 
 export const Content = styled.div`
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
 `;
 
 export const Title = styled.h2`
@@ -49,6 +49,7 @@ export const Button = styled.button`
 export const Logo = styled.img`
     grid-column: 1 / 2;
     border-radius: 4px;
+    width: 50%;
 `;
 
 export const Time = styled.p`

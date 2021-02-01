@@ -29,4 +29,9 @@ export const GlobalStyles = createGlobalStyle`
     img {
         max-width: 100%;
     }
+
+    .location,
+    .time {
+        width: 24px;
+    }
 `;

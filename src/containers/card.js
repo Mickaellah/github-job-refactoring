@@ -24,11 +24,11 @@ export default function CardsContainer({children}) {
                                 <Cards.Button type="button">{job.type}</Cards.Button>
                                 <Cards.Holder>
                                     <Cards.LocationContainer>
-                                        <Cards.Logo src="./images/public-24px.svg" alt="location" />
+                                        <Cards.Logo className="location" src="./images/public-24px.svg" alt="location" />
                                         <Cards.City>{job.location}</Cards.City>
                                     </Cards.LocationContainer>
                                     <Cards.LocationContainer>
-                                        <Cards.Logo src="./images/access_time-24px.svg" alt="Access time" />
+                                        <Cards.Logo className="time" src="./images/access_time-24px.svg" alt="Access time" />
                                         <Cards.Time>{result} hours</Cards.Time>
                                     </Cards.LocationContainer>
                                 </Cards.Holder>
