@@ -9,7 +9,7 @@ export default function CardsContainer({children}) {
 
     return (
         <Cards.Group>
-            {data && data.length == 0 && <h1>Loading...</h1>}
+            {data && data.length === 0 && <h1>Loading...</h1>}
             {data && data.map(job => {
 
                 let time = new Date().getTime() - new Date(job.created_at).getTime();

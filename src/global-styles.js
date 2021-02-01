@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     small {
-        text-transform: lowercase;
+        text-transform: capitalize;
         font-weight: lighter;
     }
 `;

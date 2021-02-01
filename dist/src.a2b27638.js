@@ -37680,7 +37680,7 @@ function CardsContainer(_ref) {
 
   var data = state.data,
       loading = state.loading;
-  return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, data && data.length == 0 && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), data && data.map(function (job) {
+  return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, data && data.length === 0 && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), data && data.map(function (job) {
     var time = new Date().getTime() - new Date(job.created_at).getTime();
     var result = Math.floor(time / (1000 * 60 * 60 * 24));
     return /*#__PURE__*/_react.default.createElement(_components.Cards.LinkText, {
@@ -37867,7 +37867,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n\n    small {\n        text-transform: lowercase;\n        font-weight: lighter;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n\n    small {\n        text-transform: capitalize;\n        font-weight: lighter;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37924,7 +37924,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59581" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60861" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
