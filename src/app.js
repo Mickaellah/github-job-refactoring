@@ -12,20 +12,15 @@ export default function App() {
     const {data, loading} = state;
 
     return (
-        <>
-            {loading && <h1>Loading...</h1>}
-            {!loading && data && (
-                <Router>
-                    <Switch>
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
-                        <Route path="/:id">
-                            <Details />
-                        </Route>
-                    </Switch>
-                </Router>
-            )}
-        </>
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/:id">
+                    <Details />
+                </Route>
+            </Switch>
+        </Router>
     )
 }

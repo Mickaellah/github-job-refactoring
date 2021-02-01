@@ -45,4 +45,9 @@ export const GlobalStyles = createGlobalStyle`
     .email_address {
         color: #1E86FF;
     }
+
+    small {
+        text-transform: lowercase;
+        font-weight: lighter;
+    }
 `;

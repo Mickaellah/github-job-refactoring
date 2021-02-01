@@ -37313,7 +37313,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function HeaderContainer(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Gigthub job"), children);
+  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Gigthub ", /*#__PURE__*/_react.default.createElement("small", null, "jobs")), children);
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/context/context.js":[function(require,module,exports) {
 "use strict";
@@ -37463,18 +37463,16 @@ function SearchFormContainer(_ref) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setCompany(e.target.value);
+    setJobTitle(e.target.value);
     var jobs = data.filter(function (job) {
       if (!jobTitle) return undefined;
-      return job.title.toLowerCase().includes(jobTitle.toLowerCase());
-    });
-    var companies = data.filter(function (job) {
-      if (!company) return undefined;
-      return job.company.toLowerCase().includes(company.toLowerCase());
+      return job.title.toLowerCase().includes(jobTitle.toLowerCase()) || job.company.toLowerCase().includes(company.toLowerCase());
     });
     dispatch({
       type: "JOBS",
       job: jobs
-    }); // dispatch({type: "JOBS", job: companies});
+    });
   }
 
   function handleChange(e) {
@@ -37682,7 +37680,7 @@ function CardsContainer(_ref) {
 
   var data = state.data,
       loading = state.loading;
-  return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, data && data.map(function (job) {
+  return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, data && data.length == 0 && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), data && data.map(function (job) {
     var time = new Date().getTime() - new Date(job.created_at).getTime();
     var result = Math.floor(time / (1000 * 60 * 60 * 24));
     return /*#__PURE__*/_react.default.createElement(_components.Cards.LinkText, {
@@ -37782,7 +37780,7 @@ function JobDetailsContainer(_ref) {
   });
   var time = new Date().getTime() - new Date(findId.created_at).getTime();
   var result = Math.floor(time / (1000 * 60 * 60 * 24));
-  return /*#__PURE__*/_react.default.createElement(_components.JobDetails, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Header, null, /*#__PURE__*/_react.default.createElement("b", null, "Github"), " jobs"), /*#__PURE__*/_react.default.createElement(_components.JobDetails.FirstArticle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Icon, {
+  return /*#__PURE__*/_react.default.createElement(_components.JobDetails, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Header, null, "Github ", /*#__PURE__*/_react.default.createElement("small", null, "jobs")), /*#__PURE__*/_react.default.createElement(_components.JobDetails.FirstArticle, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkContainer, null, /*#__PURE__*/_react.default.createElement(_components.JobDetails.Icon, {
     src: "./images/keyboard_backspace-24px.svg",
     alt: "Go back"
   }), /*#__PURE__*/_react.default.createElement(_components.JobDetails.LinkText, {
@@ -37851,12 +37849,12 @@ function App() {
 
   var data = state.data,
       loading = state.loading;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), !loading && data && /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_home.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/:id"
-  }, /*#__PURE__*/_react.default.createElement(_job_detail.default, null)))));
+  }, /*#__PURE__*/_react.default.createElement(_job_detail.default, null))));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/home":"src/pages/home.js","./pages/job_detail":"src/pages/job_detail.js","./context/context":"src/context/context.js"}],"src/global-styles.js":[function(require,module,exports) {
 "use strict";
@@ -37869,7 +37867,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n\n    small {\n        text-transform: lowercase;\n        font-weight: lighter;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37926,7 +37924,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57511" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59581" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

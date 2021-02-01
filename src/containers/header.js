@@ -5,7 +5,7 @@ export default function HeaderContainer({children}) {
     return (
         <Header>
             <Header.Text>
-                Gigthub job
+                Gigthub <small>jobs</small>
             </Header.Text>
             {children}
         </Header>

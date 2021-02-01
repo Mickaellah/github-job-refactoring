@@ -11,19 +11,15 @@ export default function SearchFormContainer({children}) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        setCompany(e.target.value);
+        setJobTitle(e.target.value);
 
         const jobs = data.filter(job => { 
             if (!jobTitle) return undefined;
-            return job.title.toLowerCase().includes(jobTitle.toLowerCase());
-        });
-
-        const companies = data.filter(job => { 
-            if (!company) return undefined;
-            return job.company.toLowerCase().includes(company.toLowerCase());
+            return job.title.toLowerCase().includes(jobTitle.toLowerCase()) || job.company.toLowerCase().includes(company.toLowerCase());
         });
 
         dispatch({type: "JOBS", job: jobs});
-        // dispatch({type: "JOBS", job: companies});
     }
 
     function handleChange(e) {
