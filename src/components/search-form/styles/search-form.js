@@ -33,8 +33,8 @@ export const Input = styled.input`
     }
 
     @media (min-width: 600px) {
+        padding-block: 24px;
         padding-inline-start: 64px;
-        padding: 24px;
     } 
 `;
 

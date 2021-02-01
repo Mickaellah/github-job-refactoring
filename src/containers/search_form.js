@@ -22,8 +22,8 @@ export default function SearchFormContainer({children}) {
             return job.company.toLowerCase().includes(company.toLowerCase());
         });
 
-        dispatch({type: "JOBS", job: jobs});
-        dispatch({type: "JOBS", job: companies});
+        dispatch({type: "JOBS", job: jobs, job: companies});
+        // dispatch({type: "JOBS", job: companies});
     }
 
     function handleChange(e) {

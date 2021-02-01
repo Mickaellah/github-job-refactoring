@@ -35919,7 +35919,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding-right: 30%;\n    padding-block: 16px;\n    border-radius: 5px;\n    border: none;\n    background-color: #ffffff;\n    padding-inline-start: 48px;\n    color: #dbdbdb;\n    margin-block-start: 8px;\n    background-image: url('./images/work_outline-24px.svg');\n    background-repeat: no-repeat;\n    background-position: 2% 50%;\n\n    ::placeholder {\n        color: #b9bdcf;\n        font-size: 12px;\n    }\n\n    @media (min-width: 600px) {\n        padding-inline-start: 64px;\n        padding: 24px;\n    } \n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding-right: 30%;\n    padding-block: 16px;\n    border-radius: 5px;\n    border: none;\n    background-color: #ffffff;\n    padding-inline-start: 48px;\n    color: #dbdbdb;\n    margin-block-start: 8px;\n    background-image: url('./images/work_outline-24px.svg');\n    background-repeat: no-repeat;\n    background-position: 2% 50%;\n\n    ::placeholder {\n        color: #b9bdcf;\n        font-size: 12px;\n    }\n\n    @media (min-width: 600px) {\n        padding-block: 24px;\n        padding-inline-start: 64px;\n    } \n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -37430,6 +37430,8 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -37471,14 +37473,10 @@ function SearchFormContainer(_ref) {
       if (!company) return undefined;
       return job.company.toLowerCase().includes(company.toLowerCase());
     });
-    dispatch({
+    dispatch(_defineProperty({
       type: "JOBS",
       job: jobs
-    });
-    dispatch({
-      type: "JOBS",
-      job: companies
-    });
+    }, "job", companies)); // dispatch({type: "JOBS", job: companies});
   }
 
   function handleChange(e) {
