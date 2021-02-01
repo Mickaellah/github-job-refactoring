@@ -35919,7 +35919,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding-right: 30%;\n    padding-block: 16px;\n    border-radius: 5px;\n    border: none;\n    background-color: #ffffff;\n    padding-inline-start: 48px;\n    color: #dbdbdb;\n    margin-block-start: 8px;\n    background-image: url('./images/work_outline-24px.svg');\n    background-repeat: no-repeat;\n    background-position: 2% 50%;\n\n    ::placeholder {\n        color: #b9bdcf;\n        font-size: 12px;\n    }\n\n    @media (min-width: 600px) {\n        padding-inline-start: 64px;\n    } \n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding-right: 30%;\n    padding-block: 16px;\n    border-radius: 5px;\n    border: none;\n    background-color: #ffffff;\n    padding-inline-start: 48px;\n    color: #dbdbdb;\n    margin-block-start: 8px;\n    background-image: url('./images/work_outline-24px.svg');\n    background-repeat: no-repeat;\n    background-position: 2% 50%;\n\n    ::placeholder {\n        color: #b9bdcf;\n        font-size: 12px;\n    }\n\n    @media (min-width: 600px) {\n        padding-inline-start: 64px;\n        padding: 24px;\n    } \n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -35929,7 +35929,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    padding: 32px;\n    border-radius: 12px;\n    background-image: url('./images/backgroundImg.png');\n    background-repeat: no-repeat;\n    object-fit: contain;\n"]);
+  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    padding: 32px;\n    border-radius: 12px;\n    background-image: url('./images/backgroundImg.png');\n    background-repeat: no-repeat;\n    object-fit: contain;\n\n    @media (min-width: 750px) {\n        padding: 48px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

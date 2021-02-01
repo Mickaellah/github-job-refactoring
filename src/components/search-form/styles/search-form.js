@@ -7,6 +7,10 @@ export const Container = styled.form`
     background-image: url('./images/backgroundImg.png');
     background-repeat: no-repeat;
     object-fit: contain;
+
+    @media (min-width: 750px) {
+        padding: 48px;
+    }
 `;
 
 export const Input = styled.input`
@@ -30,6 +34,7 @@ export const Input = styled.input`
 
     @media (min-width: 600px) {
         padding-inline-start: 64px;
+        padding: 24px;
     } 
 `;
 
