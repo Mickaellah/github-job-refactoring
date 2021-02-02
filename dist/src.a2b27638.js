@@ -37672,35 +37672,86 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function CardsContainer(_ref) {
   var children = _ref.children;
 
   var _useContext = (0, _react.useContext)(_context.Context),
       state = _useContext.state;
 
+  var _useState = (0, _react.useState)(1),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentPage = _useState2[0],
+      setCurrentPage = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(10),
+      _useState4 = _slicedToArray(_useState3, 2),
+      cardsPerPage = _useState4[0],
+      setCardsPerPage = _useState4[1];
+
   var data = state.data,
       loading = state.loading;
-  return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, null, loading && /*#__PURE__*/_react.default.createElement("h1", null, "Loading..."), !loading && data && data.map(function (job) {
-    var time = new Date().getTime() - new Date(job.created_at).getTime();
+  console.log(data);
+
+  function handleClick(e) {
+    setCurrentPage(Number(e.target.id));
+    console.log("I am clicked");
+  }
+
+  var indexOfLastCards = currentPage * cardsPerPage;
+  var indexOfFirstCards = indexOfLastCards - cardsPerPage;
+  var currentCards = data && data.slice(indexOfFirstCards, indexOfLastCards);
+  var renderCards = currentCards && currentCards.map(function (card, index) {
+    var time = new Date().getTime() - new Date(card.created_at).getTime();
     var result = Math.floor(time / (1000 * 60 * 60 * 24));
-    return /*#__PURE__*/_react.default.createElement(_components.Cards.LinkText, {
-      to: "".concat(job.id),
-      key: job.id
+    return /*#__PURE__*/_react.default.createElement(_components.Cards.Group, {
+      key: index
+    }, /*#__PURE__*/_react.default.createElement(_components.Cards.LinkText, {
+      to: "".concat(card.id)
     }, /*#__PURE__*/_react.default.createElement(_components.Cards.List, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
-      src: job.company_logo,
+      src: card.company_logo,
       alt: "Company logo"
-    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Content, null, /*#__PURE__*/_react.default.createElement(_components.Cards.TitleContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Header, null, job.company), /*#__PURE__*/_react.default.createElement(_components.Cards.Title, null, job.title), /*#__PURE__*/_react.default.createElement(_components.Cards.Button, {
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Content, null, /*#__PURE__*/_react.default.createElement(_components.Cards.TitleContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Header, null, card.company), /*#__PURE__*/_react.default.createElement(_components.Cards.Title, null, card.title), /*#__PURE__*/_react.default.createElement(_components.Cards.Button, {
       type: "button"
-    }, job.type)), /*#__PURE__*/_react.default.createElement(_components.Cards.Holder, null, /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+    }, card.type)), /*#__PURE__*/_react.default.createElement(_components.Cards.Holder, null, /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
       className: "location",
       src: "./images/public-24px.svg",
       alt: "location"
-    }), /*#__PURE__*/_react.default.createElement(_components.Cards.City, null, job.location)), /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.City, null, card.location)), /*#__PURE__*/_react.default.createElement(_components.Cards.LocationContainer, null, /*#__PURE__*/_react.default.createElement(_components.Cards.Logo, {
       className: "time",
       src: "./images/access_time-24px.svg",
       alt: "Access time"
-    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours"))))));
-  }));
+    }), /*#__PURE__*/_react.default.createElement(_components.Cards.Time, null, result, " hours")))))));
+  });
+  var pageNumbers = [];
+
+  for (var i = 1; i <= Math.ceil(data && data.length / cardsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
+  var renderPageNumbers = pageNumbers.map(function (number) {
+    return /*#__PURE__*/_react.default.createElement("button", {
+      type: "button",
+      className: "page",
+      id: number,
+      key: number,
+      onClick: handleClick
+    }, number);
+  });
+  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("div", null, renderCards), /*#__PURE__*/_react.default.createElement("div", {
+    className: "page_numbers"
+  }, renderPageNumbers));
 }
 },{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/containers/pageholder.js":[function(require,module,exports) {
 "use strict";
@@ -37856,7 +37907,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n\n    small {\n        text-transform: capitalize;\n        font-weight: lighter;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n\n    button {\n        cursor: pointer;\n    }\n\n    small {\n        text-transform: capitalize;\n        font-weight: lighter;\n    }\n\n    .page_numbers {\n        display: flex;\n        flex-direction: row;\n        margin-inline-start: 37%;\n        margin-block-start: 32px;\n    }\n\n    .page {\n        margin-inline-start: 16px;\n        border: 1px solid #B7BCCE;\n        color: #B7BCCE;\n        background-color: #dbdbdb;\n        border-radius: 4px;\n        padding-block: 8px;\n        padding-inline: 12px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37913,7 +37964,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60861" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51150" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

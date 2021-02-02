@@ -46,8 +46,29 @@ export const GlobalStyles = createGlobalStyle`
         color: #1E86FF;
     }
 
+    button {
+        cursor: pointer;
+    }
+
     small {
         text-transform: capitalize;
         font-weight: lighter;
+    }
+
+    .page_numbers {
+        display: flex;
+        flex-direction: row;
+        margin-inline-start: 37%;
+        margin-block-start: 32px;
+    }
+
+    .page {
+        margin-inline-start: 16px;
+        border: 1px solid #B7BCCE;
+        color: #B7BCCE;
+        background-color: #dbdbdb;
+        border-radius: 4px;
+        padding-block: 8px;
+        padding-inline: 12px;
     }
 `;
