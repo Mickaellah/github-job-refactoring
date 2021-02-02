@@ -37388,22 +37388,24 @@ function ContextProvider(_ref) {
 
   var API = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
   (0, _react.useEffect)(function () {
-    dispatch({
-      type: "LOADING"
-    });
-    fetch(API, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (data) {
+    setTimeout(function () {
       dispatch({
-        type: "LOADING",
-        data: data
+        type: "LOADING"
       });
-    });
+      fetch(API, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      }).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        dispatch({
+          type: "LOADING",
+          data: data
+        });
+      });
+    }, 3000);
   }, []);
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
@@ -37702,7 +37704,6 @@ function CardsContainer(_ref) {
 
   var data = state.data,
       loading = state.loading;
-  console.log(data);
 
   function handleClick(e) {
     setCurrentPage(Number(e.target.id));
@@ -37749,9 +37750,11 @@ function CardsContainer(_ref) {
       onClick: handleClick
     }, number);
   });
-  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("div", null, renderCards), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("section", null, loading && /*#__PURE__*/_react.default.createElement("h1", {
+    className: "loading"
+  }, "Loading..."), !loading && data && /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("div", null, renderCards), /*#__PURE__*/_react.default.createElement("div", {
     className: "page_numbers"
-  }, renderPageNumbers));
+  }, renderPageNumbers)));
 }
 },{"react":"node_modules/react/index.js","../context/context":"src/context/context.js","../components":"src/components/index.js"}],"src/containers/pageholder.js":[function(require,module,exports) {
 "use strict";
@@ -37907,7 +37910,7 @@ exports.GlobalStyles = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n\n    button {\n        cursor: pointer;\n    }\n\n    small {\n        text-transform: capitalize;\n        font-weight: lighter;\n    }\n\n    .page_numbers {\n        display: flex;\n        flex-direction: row;\n        margin-inline-start: 37%;\n        margin-block-start: 32px;\n    }\n\n    .page {\n        margin-inline-start: 16px;\n        border: 1px solid #B7BCCE;\n        color: #B7BCCE;\n        background-color: #dbdbdb;\n        border-radius: 4px;\n        padding-block: 8px;\n        padding-inline: 12px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    @font-face {\n        font-family: \"Roboto Regular\";\n        src: url('./fonts/Roboto-Regular.woff2') format('woff2'),\n            url('./fonts/Roboto-Regular.woff') format('woff');\n        font-weight: 400;\n    }\n    html, body {\n        font-family: \"Roboto Regular\";\n        font-size: 16px;\n        margin: 0;\n        padding: 16px;\n        color: #334680;\n        background-color: #dbdbdb;\n\n        @media (min-width: 600px) {\n            max-width: 1214px;\n            margin-inline-start: auto;\n            margin-inline-end: auto;\n        }\n    }\n\n    a {\n        text-decoration: none;\n    }\n\n    img {\n        max-width: 100%;\n    }\n\n    .location,\n    .time {\n        width: 24px;\n    }\n\n    @media (min-width: 1000px) {\n        .location,\n        .time {\n            margin-block-start: 40px;\n        }\n    }\n\n    .email_address {\n        color: #1E86FF;\n    }\n\n    .loading {\n        font-size: 36px;\n        margin-inline-start: 32px;\n    }\n\n    button {\n        cursor: pointer;\n    }\n\n    small {\n        text-transform: capitalize;\n        font-weight: lighter;\n    }\n\n    .page_numbers {\n        display: flex;\n        flex-direction: row;\n        margin-inline-start: 37%;\n        margin-block-start: 32px;\n\n        @media (min-width: 600px) {\n            margin-inline-start: 50%;\n        }\n\n        @media (min-width: 800px) {\n            margin-inline-start: 60%;\n        }\n    }\n\n    .page {\n        margin-inline-start: 16px;\n        border: 1px solid #B7BCCE;\n        color: #B7BCCE;\n        background-color: #dbdbdb;\n        border-radius: 4px;\n        padding-block: 8px;\n        padding-inline: 12px;\n    }\n\n    .page:focus {\n        color: white;\n        background-color: #1E86FF;\n    } \n\n    .page:hover {\n        color: #1E86FF;\n        border: 1px solid #1E86FF;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37964,7 +37967,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51150" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59762" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

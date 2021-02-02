@@ -32,17 +32,19 @@ export default function ContextProvider({children}) {
     const API = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
 
     useEffect(() => {
-        dispatch({type: "LOADING"})
-        fetch(API, {
-            headers : { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
+        setTimeout(() => {
+            dispatch({type: "LOADING"})
+            fetch(API, {
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
                 dispatch({type: "LOADING", data: data});
             });
+        }, 3000);
     }, []);
 
     return (

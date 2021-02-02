@@ -8,7 +8,6 @@ export default function CardsContainer({children}) {
     const [currentPage, setCurrentPage] = useState(1);
     const [cardsPerPage, setCardsPerPage] = useState(10);
     const {data, loading} = state;
-    console.log(data);
 
     function handleClick(e) {
         setCurrentPage(Number(e.target.id));
@@ -65,12 +64,17 @@ export default function CardsContainer({children}) {
 
     return (
         <section>
-            <div>
-                {renderCards}
-            </div>
-            <div className="page_numbers">
-                {renderPageNumbers}
-            </div>
+            {loading && <h1 className="loading">Loading...</h1>}
+            {!loading && data && 
+                <article>
+                    <div>
+                        {renderCards}
+                    </div>
+                    <div className="page_numbers">
+                        {renderPageNumbers}
+                    </div>
+                </article>
+            }
         </section>
     )
 }

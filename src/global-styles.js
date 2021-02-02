@@ -46,6 +46,11 @@ export const GlobalStyles = createGlobalStyle`
         color: #1E86FF;
     }
 
+    .loading {
+        font-size: 36px;
+        margin-inline-start: 32px;
+    }
+
     button {
         cursor: pointer;
     }
@@ -60,6 +65,14 @@ export const GlobalStyles = createGlobalStyle`
         flex-direction: row;
         margin-inline-start: 37%;
         margin-block-start: 32px;
+
+        @media (min-width: 600px) {
+            margin-inline-start: 50%;
+        }
+
+        @media (min-width: 800px) {
+            margin-inline-start: 60%;
+        }
     }
 
     .page {
@@ -70,5 +83,15 @@ export const GlobalStyles = createGlobalStyle`
         border-radius: 4px;
         padding-block: 8px;
         padding-inline: 12px;
+    }
+
+    .page:focus {
+        color: white;
+        background-color: #1E86FF;
+    } 
+
+    .page:hover {
+        color: #1E86FF;
+        border: 1px solid #1E86FF;
     }
 `;
