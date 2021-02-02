@@ -37707,7 +37707,6 @@ function CardsContainer(_ref) {
 
   function handleClick(e) {
     setCurrentPage(Number(e.target.id));
-    console.log("I am clicked");
   }
 
   var indexOfLastCards = currentPage * cardsPerPage;

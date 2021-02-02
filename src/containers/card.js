@@ -11,7 +11,6 @@ export default function CardsContainer({children}) {
 
     function handleClick(e) {
         setCurrentPage(Number(e.target.id));
-        console.log("I am clicked");
     }
 
     const indexOfLastCards = currentPage * cardsPerPage;
